@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9208297134370104666}
   m_Layer: 0
-  m_Name: BG_SFX
+  m_Name: BG_SFX_Ocean
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -2,9 +2,6 @@ using UnityEngine;
 
 namespace CthulhuGame
 {
-    /// <summary>
-    /// Точка, в которой будет появляться уничтоженный корабль игрока.
-    /// </summary>
     public class RestorePoint : MonoBehaviour
     {
         [SerializeField] private Transform _transform;

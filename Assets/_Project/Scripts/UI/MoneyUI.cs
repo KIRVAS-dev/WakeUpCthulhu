@@ -3,9 +3,6 @@ using UnityEngine.UI;
 
 namespace CthulhuGame
 {
-    /// <summary>
-    /// Отображает деньги игрока в интерфейсе.
-    /// </summary>
     public class MoneyUI : MonoBehaviour
     {
         [SerializeField] private Text _text;
@@ -20,6 +17,8 @@ namespace CthulhuGame
 
         private void OnDestroy()
         {
+            UpdateText();
+            
             Player.Instance.Money.OnMoneyChanged -= UpdateText;
         }
         #endregion

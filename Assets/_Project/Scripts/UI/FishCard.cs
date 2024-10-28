@@ -3,9 +3,6 @@ using UnityEngine.UI;
 
 namespace CthulhuGame
 {
-    /// <summary>
-    /// Показывает подробную информацию о пойманной рыбе.
-    /// </summary>
     public class FishCard : MonoBehaviour
     {
         [SerializeField] private Image _image;

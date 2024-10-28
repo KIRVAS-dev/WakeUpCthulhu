@@ -2,10 +2,6 @@ using UnityEngine;
 
 namespace CthulhuGame
 {
-    /// <summary>
-    /// Базовый скрипт паттерна "Singleton".
-    /// </summary>
-    /// <typeparam name="T"></typeparam>    
     [DisallowMultipleComponent]
     public abstract class SingletonBase<T> : MonoBehaviour where T : MonoBehaviour
     {
@@ -18,7 +14,6 @@ namespace CthulhuGame
         {
             if (Instance != null)
             {
-                //Debug.LogWarning("MonoSingleton: object of type already exists, instance will be destroyed = " + typeof(T).Name);
                 Destroy(this);
                 return;
             }

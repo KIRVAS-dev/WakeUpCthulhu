@@ -2,9 +2,6 @@ using UnityEngine;
 
 namespace CthulhuGame
 {
-    /// <summary>
-    /// Отключает изображение корабля, если его здоровье опустилось до 0.
-    /// </summary>
     public class ShipSpriteEnabler : MonoBehaviour
     {
         [SerializeField] private SpriteRenderer _sprite;

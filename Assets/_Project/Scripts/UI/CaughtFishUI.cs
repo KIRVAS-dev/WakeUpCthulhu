@@ -3,9 +3,6 @@ using UnityEngine.UI;
 
 namespace CthulhuGame
 {
-    /// <summary>
-    /// Открывает информацию о пойманной рыбе в интерфейсе при успешном прохождении мини-игры FishingChallenge.
-    /// </summary>
     public class CaughtFishUI : MonoBehaviour
     {
         [SerializeField] private GameObject _canvasPanel;
@@ -26,8 +23,7 @@ namespace CthulhuGame
             _accept.onClick.AddListener(DoOnAccept);
             _decline.onClick.AddListener(DoOnDecline);
             _info.onClick.AddListener(ShowFishInformation); 
-            
-            FishAlbum.Instance.OnFirstCatch += ShowFishInformation;
+
             FishingChallenge.Instance.OnTryCatchFish += ActivatePanel;
             Player.Instance.FishingRod.OnFishAssigned += SetFishImage;
         }
@@ -38,7 +34,6 @@ namespace CthulhuGame
             _decline.onClick.RemoveListener(DoOnDecline);
             _info.onClick.RemoveListener(ShowFishInformation);
 
-            FishAlbum.Instance.OnFirstCatch -= ShowFishInformation;
             FishingChallenge.Instance.OnTryCatchFish -= ActivatePanel;
             Player.Instance.FishingRod.OnFishAssigned -= SetFishImage;
         }
@@ -59,18 +54,11 @@ namespace CthulhuGame
             if (fish != null)
             {
                 _image.sprite = Player.Instance.FishingRod.CaughtFish.Sprite.sprite;
-                //_image.SetNativeSize(); // Attention! Only for Debug!
 
-                TryShowFishOverweightButton(fish);
-                
-                FishAlbum.Instance.CheckCardInfo(); // Attention!
+                TryShowFishOverweightButton(fish);               
             }
         }
 
-        /// <summary>
-        /// Проверяет, показывать ли кнопку, сообщающую о превышении допустимого веса корабля.
-        /// </summary>
-        /// <param name="fish"></param>
         private void TryShowFishOverweightButton(Fish fish)
         {
             var ship = Player.Instance.Ship;
@@ -83,18 +71,12 @@ namespace CthulhuGame
             }
         }
 
-        /// <summary>
-        /// Показать карточку рыбы.
-        /// </summary>
         private void ShowFishInformation()
         {
             _fishCard.gameObject.SetActive(true);
             _fishCard.Initialize();
         }
 
-        /// <summary>
-        /// Взять рыбу.
-        /// </summary>
         public void DoOnAccept()
         {
             _canvasPanel.SetActive(false);
@@ -103,9 +85,6 @@ namespace CthulhuGame
             FishingChallenge.Instance.Deactivate();
         }
 
-        /// <summary>
-        /// Отпустить рыбу.
-        /// </summary>
         public void DoOnDecline()
         {
             if (_overweight.gameObject.activeSelf)

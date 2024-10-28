@@ -3,9 +3,6 @@ using UnityEngine.UI;
 
 namespace CthulhuGame
 {
-    /// <summary>
-    /// Открывает информацию в интерфейсе о том, что рыба уплыла при неудачном прохождении мини-игры FishingChallenge.
-    /// </summary>
     public class MissedFishUI : MonoBehaviour
     {
         [SerializeField] private GameObject _canvasPanel;

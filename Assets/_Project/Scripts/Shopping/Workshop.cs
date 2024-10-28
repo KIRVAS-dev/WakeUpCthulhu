@@ -2,14 +2,8 @@ using UnityEngine;
 
 namespace CthulhuGame
 {
-    /// <summary>
-    /// Мастерская, где можно отремонтировать лодку игрока.
-    /// </summary>
     public class Workshop : MonoBehaviour
     {
-        /// <summary>
-        /// Стоимость полной починки корабля. 
-        /// </summary>
         [SerializeField] private int _repairCost;
         
         private static Health _health;
@@ -46,9 +40,6 @@ namespace CthulhuGame
         }
         #endregion
 
-        /// <summary>
-        /// Стоимость починки корабля с учетом повреждений.
-        /// </summary>
         public static int CurrentRepairCost()
         {
             if (_health.CurrentHealth < _health.MaxHealth)
@@ -62,9 +53,6 @@ namespace CthulhuGame
             }
         }
 
-        /// <summary>
-        /// Отремонтировать корабль за определенную стоимость.
-        /// </summary>
         public static void TryRepairShip()
         {
             if (CurrentRepairCost() > 0)

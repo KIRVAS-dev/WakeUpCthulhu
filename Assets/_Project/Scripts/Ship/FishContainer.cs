@@ -3,20 +3,11 @@ using System;
 
 namespace CthulhuGame
 {
-    /// <summary>
-    /// Склад для пойманной рыбы на корабле.
-    /// </summary>
     public class FishContainer : MonoBehaviour
     {
-        /// <summary>
-        /// Суммарный вес пойманной рыбы.
-        /// </summary>
         [SerializeField] private int _totalFishWeight;
         public int Weight => _totalFishWeight;
 
-        /// <summary>
-        /// Суммарна¤ стоимость пойманной рыбы.
-        /// </summary>
         [SerializeField] private int _totalFishCost;
         public int Cost => _totalFishCost;
       

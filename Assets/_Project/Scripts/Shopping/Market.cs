@@ -3,9 +3,6 @@ using System;
 
 namespace CthulhuGame
 {
-    /// <summary>
-    /// Рынок, на котором игрок может продать рыбу и купить апгрейды.
-    /// </summary>
     public class Market : MonoBehaviour
     {
         private Collider2D _player;

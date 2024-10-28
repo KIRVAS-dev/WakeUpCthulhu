@@ -3,9 +3,6 @@ using UnityEngine.UI;
 
 namespace CthulhuGame
 {
-    /// <summary>
-    /// Отображает текущий вес корабля в интерфейсе.
-    /// </summary>
     public class WeightUI : MonoBehaviour
     {
         [SerializeField] private Image _image;
@@ -18,13 +15,13 @@ namespace CthulhuGame
 
         private void Start()
         {
-            //Player.Instance.Ship.OnShipInitialized += UpdateImage;
+            UpdateImage();
             Player.Instance.Ship.OnWeightChanged += UpdateImage;  
         }
 
         private void OnDestroy()
         {
-            //Player.Instance.Ship.OnShipInitialized -= UpdateImage;
+            UpdateImage();
             Player.Instance.Ship.OnWeightChanged -= UpdateImage;
         }
         #endregion

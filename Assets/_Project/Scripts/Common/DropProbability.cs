@@ -2,9 +2,6 @@ using System;
 
 namespace CthulhuGame
 {
-    /// <summary>
-    /// Возвращает вероятность выпадения предмета от 0 до 100%
-    /// </summary>
     public static class DropProbability
     {      
         public static int Value

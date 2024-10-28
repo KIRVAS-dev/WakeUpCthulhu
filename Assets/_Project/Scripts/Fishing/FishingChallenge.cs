@@ -4,16 +4,11 @@ using UnityEngine.UI;
 
 namespace CthulhuGame
 {
-    /// <summary>
-    /// Класс, отвечающий за отображение мини-игры, в которой в зависимости от вовремя нажатой кнопки, можно либо поймать, либо упустить рыбу во время рыбалки.
-    /// </summary>
     public sealed class FishingChallenge : SingletonBase<FishingChallenge>
     {
         [SerializeField] private Canvas _canvas;
-        //[SerializeField] private Canvas _inputCanvas;
         [SerializeField] private Image _fishCircleImage;
-        [SerializeField] private Image _playerCircleImage;        
-        //[SerializeField] private Image _fishigRodImage;        
+        [SerializeField] private Image _playerCircleImage;              
 
         private Vector3 _defaultPlayerScale;    
 
@@ -51,9 +46,6 @@ namespace CthulhuGame
         }
         #endregion
 
-        /// <summary>
-        /// Сохранение заранее настроенного состояния для корректного отображения мини-игры.
-        /// </summary>
         private void SaveParametrs()
         {
             _defaultFishColor = _fishCircleImage.color;
@@ -65,9 +57,6 @@ namespace CthulhuGame
             _isLooped = false;
         }
 
-        /// <summary>
-        /// Восстановление заранее настроенного состояния для корректного отображения мини-игры.
-        /// </summary>
         private void RestoreParametrs()
         {
             _fishCircleImage.color = _defaultFishColor;
@@ -80,10 +69,6 @@ namespace CthulhuGame
 
             _isLooped = false;
         }
-
-        /// <summary>
-        /// Отображение зацикленной анимации.
-        /// </summary>
         private void DoCircleAnimation()
         {
             if (_isLooped)
@@ -117,9 +102,6 @@ namespace CthulhuGame
             }
         }
 
-        /// <summary>
-        /// Запуск мини-игры на сцене.
-        /// </summary>
         public void Activate()
         { 
             transform.position = Player.Instance.FishingRod.FishingPoint.gameObject.transform.position;
@@ -135,26 +117,17 @@ namespace CthulhuGame
             enabled = true;
             OnEnable?.Invoke();
 
-            //_inputCanvas.gameObject.SetActive(false);
             Player.Instance.TakeControlsFromPlayer();
         }
 
-        /// <summary>
-        /// Выключение мини-игры на сцене.
-        /// </summary>
         public void Deactivate()
         {
             RestoreParametrs();
             _canvas.gameObject.SetActive(false);
             OnDisable?.Invoke();
 
-            //_inputCanvas.gameObject.SetActive(true);
             Player.Instance.GiveControlsToPlayer();
         }
-
-        /// <summary>
-        /// Проверка на выполнения условий успешного завершения мини-игры.
-        /// </summary>
         public void TryCatchFish()
         {
             enabled = false;

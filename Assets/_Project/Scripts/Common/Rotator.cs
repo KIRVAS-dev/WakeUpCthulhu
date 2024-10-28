@@ -2,9 +2,6 @@ using UnityEngine;
 
 namespace CthulhuGame
 {
-    /// <summary>
-    /// Вращает объект вокруг своей оси.
-    /// </summary>
     public class Rotator : MonoBehaviour
     {
         [SerializeField] private Transform _targetTransform;

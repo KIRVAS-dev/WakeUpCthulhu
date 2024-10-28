@@ -16,6 +16,7 @@ namespace CthulhuGame
         {
             Vector2 random = Random.insideUnitCircle * _radius;
             float shipY = Player.Instance.Ship.transform.position.y;
+
             return new Vector3(random.x, shipY, random.y) + transform.position;
         }
 

@@ -34,7 +34,7 @@ namespace CthulhuGame
 
         public override void TryBuyUpgrade()
         {
-            Player.Instance.Ship.Initialize(_asset);
+            //Player.Instance.Ship.Initialize(_asset);
 
             base.TryBuyUpgrade();
         }

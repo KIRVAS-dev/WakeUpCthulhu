@@ -528,6 +528,10 @@ GameObject:
   - component: {fileID: 8389247025685955448}
   - component: {fileID: 5324669211208737125}
   - component: {fileID: 2364373981693783737}
+  - component: {fileID: 7975225594731438362}
+  - component: {fileID: 7553785752827225437}
+  - component: {fileID: 53561910784983691}
+  - component: {fileID: 5435445587761028880}
   m_Layer: 0
   m_Name: Ship
   m_TagString: Untagged
@@ -629,6 +633,68 @@ MonoBehaviour:
   carSpeed: 0
   isDrifting: 0
   isTractionLocked: 0
+--- !u!114 &7975225594731438362
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2946551554476391514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ccbd0f3cb650c243aee6a44e03c1d53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _rb: {fileID: 5324669211208737125}
+  _carryingCapacity: 100
+  _currentWeight: 0
+  _health: {fileID: 7553785752827225437}
+  _fishContainer: {fileID: 53561910784983691}
+--- !u!114 &7553785752827225437
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2946551554476391514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0312d4dd91ef9e944a7e4c8908ccf9c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _maxHealth: 100
+  _currentHealth: 0
+  _damageConstant: 10
+  _damageMultiplier: 1.5
+  _isIndestructible: 0
+--- !u!114 &53561910784983691
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2946551554476391514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 213d864b3875a4349bb1263f0de39dce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _totalFishWeight: 0
+  _totalFishCost: 0
+--- !u!114 &5435445587761028880
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2946551554476391514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ad855bbee157b440a1f12235d836f44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _restorePoint: {fileID: 0}
+  _restoredHealthPercentage: 0
 --- !u!1 &4151623208210460597
 GameObject:
   m_ObjectHideFlags: 0

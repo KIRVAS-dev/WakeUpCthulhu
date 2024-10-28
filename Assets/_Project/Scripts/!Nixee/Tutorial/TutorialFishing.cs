@@ -25,7 +25,7 @@ public class TutorialFishing : MonoBehaviour
                                                 fishingObject.transform.position.y + spawnOffset);
         fishingObject.gameObject.SetActive(true);
 
-        PlayerController.Instance.EnableControl();
+        //PlayerController.Instance.EnableControl();
     }
 
     private void OnFishCatch(bool value)

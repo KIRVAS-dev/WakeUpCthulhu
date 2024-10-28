@@ -14,7 +14,7 @@ public class TutorialManager : Singleton<TutorialManager>
             screens[i].SetActive(false);
 
         screens[currentIndex].SetActive(true);
-        PlayerController.Instance.DisableControl();
+        //PlayerController.Instance.DisableControl();
     }
 
 
@@ -29,6 +29,6 @@ public class TutorialManager : Singleton<TutorialManager>
 
         screens[currentIndex - 1].SetActive(false);
         screens[currentIndex].SetActive(true);
-        PlayerController.Instance.DisableControl();
+        //PlayerController.Instance.DisableControl();
     }
 }

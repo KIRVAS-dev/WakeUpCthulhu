@@ -28,8 +28,8 @@ namespace CthulhuGame
         /// <summary>
         /// Управление кораблем.
         /// </summary>
-        [SerializeField] private PlayerController _playerController;
-        public PlayerController PlayerController => _playerController;
+        [SerializeField] private PrometeoCarController _playerController;
+        public PrometeoCarController PlayerController => _playerController;
 
         /// <summary>
         /// Текущая точка "воскрешения" корабля игрока.
@@ -40,12 +40,12 @@ namespace CthulhuGame
         public void GiveControlsToPlayer()
         {
             _playerController.enabled = true;
-            _playerController.AllowMovement();
+            //_playerController.AllowMovement();
         }
         
         public void TakeControlsFromPlayer()
         {
-            _playerController.ProhibitMovement();
+            //_playerController.ProhibitMovement();
             _playerController.enabled = false;
         }
     }

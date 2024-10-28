@@ -14,8 +14,6 @@ namespace CthulhuGame
             FishingChallenge,
             CatchFish,
             Market,
-            BoatShop,
-            FishingRodShop,
             Workshop
         }
 
@@ -30,8 +28,6 @@ namespace CthulhuGame
         [SerializeField] private CaughtFishUI _caughtFishUI;
         [SerializeField] private MissedFishUI _missedFishUI;
         [SerializeField] private MarketUI _marketUI;
-        [SerializeField] private ShopUI _boatShopUI;
-        [SerializeField] private ShopUI _fishingRodShopUI;
         [SerializeField] private WorkshopUI _workshopUI;
 
         [Header("Action assets")]
@@ -39,8 +35,6 @@ namespace CthulhuGame
         [SerializeField] private ActionButtonAsset _fishingChallenge;
         [SerializeField] private ActionButtonAsset _catchFish;
         [SerializeField] private ActionButtonAsset _market;
-        [SerializeField] private ActionButtonAsset _boatShop;
-        [SerializeField] private ActionButtonAsset _fishingRodShop;
         [SerializeField] private ActionButtonAsset _workshop;
 
         #region UnityEvents
@@ -51,8 +45,6 @@ namespace CthulhuGame
             _button.onClick.AddListener(DoAction);
             Player.Instance.FishingRod.OnFishingPlaceNearby += DoOnFishingPlaceNearby;
             Player.Instance.Ship.OnMarketNearby += DoOnMarketNearby;
-            Player.Instance.Ship.OnBoatShopNearby += DoOnBoatShopNearby;
-            Player.Instance.Ship.OnFishingRodShopNearby += DoOnFishingRodShopNearby;
             Player.Instance.Ship.OnWorkshopNearby += DoOnWorkshopNearby;
         }
 
@@ -61,8 +53,6 @@ namespace CthulhuGame
             _button.onClick.RemoveListener(DoAction);
             Player.Instance.FishingRod.OnFishingPlaceNearby -= DoOnFishingPlaceNearby;
             Player.Instance.Ship.OnMarketNearby -= DoOnMarketNearby;
-            Player.Instance.Ship.OnBoatShopNearby -= DoOnBoatShopNearby;
-            Player.Instance.Ship.OnFishingRodShopNearby -= DoOnFishingRodShopNearby;
             Player.Instance.Ship.OnWorkshopNearby -= DoOnWorkshopNearby;
         }
         #endregion
@@ -95,14 +85,6 @@ namespace CthulhuGame
 
                 case ActionType.Market:
                     Initialize(_market);
-                    break;
-
-                case ActionType.BoatShop:
-                    Initialize(_boatShop);
-                    break;               
-                
-                case ActionType.FishingRodShop:
-                    Initialize(_fishingRodShop);
                     break;
 
                 case ActionType.Workshop:
@@ -143,20 +125,6 @@ namespace CthulhuGame
                     break;
 
 
-                case ActionType.BoatShop:
-                    
-                    _boatShopUI.OpenShop(); 
-
-                    break;
-
-
-                case ActionType.FishingRodShop:
-                    
-                    _fishingRodShopUI.OpenShop();
-
-                    break;
-
-
                 case ActionType.Workshop:
 
                     _workshopUI.OpenWorkshop();
@@ -182,30 +150,6 @@ namespace CthulhuGame
             if (nearby)
             {
                 SwitchAction(ActionType.Market);
-            }
-            else
-            {
-                SwitchAction(ActionType.None);
-            }
-        }
-
-        private void DoOnBoatShopNearby(bool nearby)
-        {
-            if (nearby)
-            {
-                SwitchAction(ActionType.BoatShop);
-            }
-            else
-            {
-                SwitchAction(ActionType.None);
-            }
-        }
-
-        private void DoOnFishingRodShopNearby(bool nearby)
-        {
-            if (nearby)
-            {
-                SwitchAction(ActionType.FishingRodShop);
             }
             else
             {

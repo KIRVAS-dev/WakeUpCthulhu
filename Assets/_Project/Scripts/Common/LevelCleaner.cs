@@ -31,9 +31,9 @@ namespace CthulhuGame
                     DestroyAll<FishingRod>();
                     DestroyAll<Market>();
                     DestroyAll<Player>();
-                    DestroyAll<PlayerController>();
+                    DestroyAll<PrometeoCarController>();
                     DestroyAll<Ship>();
-                    DestroyAll<BoatShop>();
+                    //DestroyAll<BoatShop>();
                     DestroyAll<Spawner>();
                     DestroyAll<Money>();
                 }

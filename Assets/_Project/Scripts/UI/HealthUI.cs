@@ -18,13 +18,13 @@ namespace CthulhuGame
 
         private void Start()
         {
-            Player.Instance.Ship.OnShipInitialized += UpdateImage;
+            //Player.Instance.Ship.OnShipInitialized += UpdateImage;
             Player.Instance.Ship.Health.OnHealthChanged += UpdateImage;
         }
 
         private void OnDestroy()
         {
-            Player.Instance.Ship.OnShipInitialized -= UpdateImage;
+            //Player.Instance.Ship.OnShipInitialized -= UpdateImage;
             Player.Instance.Ship.Health.OnHealthChanged -= UpdateImage;
         }
         #endregion

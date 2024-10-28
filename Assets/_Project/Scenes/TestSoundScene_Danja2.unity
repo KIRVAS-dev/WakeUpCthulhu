@@ -142,7 +142,7 @@ AudioSource:
   m_audioClip: {fileID: 8300000, guid: 14565c9cc0e40324bbef2ac6d38c9a66, type: 3}
   m_Resource: {fileID: 8300000, guid: 14565c9cc0e40324bbef2ac6d38c9a66, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.611
+  m_Volume: 0.875
   m_Pitch: 0.88
   Loop: 1
   Mute: 0
@@ -309,7 +309,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2585870149748379774, guid: d9549fb95e38c3441b142e82a7f8c259, type: 3}
       propertyPath: m_Name
-      value: Prefab_SFX_Creepy
+      value: SFX_Creepy
       objectReference: {fileID: 0}
     - target: {fileID: 4674348983906846858, guid: d9549fb95e38c3441b142e82a7f8c259, type: 3}
       propertyPath: m_LocalPosition.x
@@ -476,7 +476,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7975130245526634553, guid: 02f64910bd27c4e4692d7800ab36a420, type: 3}
       propertyPath: m_Name
-      value: Prefab_SFX_Talking
+      value: SFX_Talking
       objectReference: {fileID: 0}
     - target: {fileID: 8641568418905873822, guid: 02f64910bd27c4e4692d7800ab36a420, type: 3}
       propertyPath: m_LocalPosition.x

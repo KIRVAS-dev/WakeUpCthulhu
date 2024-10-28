@@ -10,7 +10,7 @@ namespace CthulhuGame
     public sealed class FishingChallenge : SingletonBase<FishingChallenge>
     {
         [SerializeField] private Canvas _canvas;
-        [SerializeField] private Canvas _inputCanvas;
+        //[SerializeField] private Canvas _inputCanvas;
         [SerializeField] private Image _fishCircleImage;
         [SerializeField] private Image _playerCircleImage;        
 
@@ -134,7 +134,7 @@ namespace CthulhuGame
             enabled = true;
             OnEnable?.Invoke();
 
-            _inputCanvas.gameObject.SetActive(false);
+            //_inputCanvas.gameObject.SetActive(false);
             Player.Instance.TakeControlsFromPlayer();
         }
 
@@ -147,7 +147,7 @@ namespace CthulhuGame
             _canvas.gameObject.SetActive(false);
             OnDisable?.Invoke();
 
-            _inputCanvas.gameObject.SetActive(true);
+            //_inputCanvas.gameObject.SetActive(true);
             Player.Instance.GiveControlsToPlayer();
         }
 

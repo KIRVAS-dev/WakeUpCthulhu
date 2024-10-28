@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &6687485464795157310
+--- !u!1 &8735279391640618002
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,60 +8,63 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 3992070921334683655}
-  - component: {fileID: 680754810060687639}
-  - component: {fileID: 2358221928800886120}
+  - component: {fileID: 7792044433145777342}
+  - component: {fileID: 3119599917366978192}
+  - component: {fileID: 2283942810252956186}
   m_Layer: 0
-  m_Name: GarbageSpawner
+  m_Name: FishingRod
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &3992070921334683655
+--- !u!4 &7792044433145777342
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6687485464795157310}
+  m_GameObject: {fileID: 8735279391640618002}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &680754810060687639
+--- !u!114 &3119599917366978192
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6687485464795157310}
+  m_GameObject: {fileID: 8735279391640618002}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 105dd5f78931c444eb4b3e8cf0959cc7, type: 3}
+  m_Script: {fileID: 11500000, guid: 206e95d82d407a54bbc18fcb34ae2f51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _spawnMode: 0
-  _prefab: {fileID: 1377242586107276752, guid: b982ad705ef5769408211703c1b2e16c, type: 3}
-  _area: {fileID: 2358221928800886120}
-  _entityIsTurnedToRandomAngle: 0
-  _respawnTime: 0
-  _numSpawns: 3
---- !u!114 &2358221928800886120
-MonoBehaviour:
+  _fishingRodCollider: {fileID: 2283942810252956186}
+  _speed: 3
+--- !u!135 &2283942810252956186
+SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6687485464795157310}
+  m_GameObject: {fileID: 8735279391640618002}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5243be8c0ca543940a8f951909d4bd54, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _radius: 10
-  _color: {r: 0.83137256, g: 0.1607843, b: 0.6516446, a: 0.09803922}
+  serializedVersion: 3
+  m_Radius: 4
+  m_Center: {x: 0, y: 0, z: 0}

@@ -5,19 +5,18 @@ using UnityEditor;
 
 namespace CthulhuGame
 {
-    /// <summary>
-    /// Универсальный скрипт дл¤ визуализации окружности нужного радиуса и цвета.
-    /// </summary>
-    public sealed class CircleArea : MonoBehaviour
+    public sealed class SphereArea : MonoBehaviour
     {
         [SerializeField] private float _radius;
         [SerializeField] private Color _color;
 
         public float Radius => _radius;
 
-        public Vector2 GetRandomInsideZone()
+        public Vector3 GetRandomInsideZone()
         {
-            return (Vector2)transform.position + (Vector2)Random.insideUnitSphere * _radius;
+            Vector2 random = Random.insideUnitCircle * _radius;
+            float shipY = Player.Instance.Ship.transform.position.y;
+            return new Vector3(random.x, shipY, random.y) + transform.position;
         }
 
         public void TrySetRadius(float radius)

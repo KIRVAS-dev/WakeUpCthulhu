@@ -30,31 +30,31 @@ namespace CthulhuGame
 
         public void Initialize()
         {
-            var fishingRod = Player.Instance.FishingRod.Asset;
+            //var fishingRod = Player.Instance.FishingRod.Asset;
             
-            if (fishingRod == _defaultFishingRod)
-            {
-                _currentArray = new FishAsset[_defaultArray.Length];       
-                _currentArray = _defaultArray;
-            }
+            //if (fishingRod == _defaultFishingRod)
+            //{
+            //    _currentArray = new FishAsset[_defaultArray.Length];       
+            //    _currentArray = _defaultArray;
+            //}
 
-            if (fishingRod == _bronzeFishingRod)
-            {
-                _currentArray = new FishAsset[_defaultArray.Length];
-                _currentArray = _defaultArray.Concat(_bronzeArray).ToArray();
-            }
+            //if (fishingRod == _bronzeFishingRod)
+            //{
+            //    _currentArray = new FishAsset[_defaultArray.Length];
+            //    _currentArray = _defaultArray.Concat(_bronzeArray).ToArray();
+            //}
 
-            if (fishingRod == _silverFishingRod)
-            {
-                _currentArray = new FishAsset[_defaultArray.Length];
-                _currentArray = _defaultArray.Concat(_bronzeArray).Concat(_silverArray).ToArray();
-            }
+            //if (fishingRod == _silverFishingRod)
+            //{
+            //    _currentArray = new FishAsset[_defaultArray.Length];
+            //    _currentArray = _defaultArray.Concat(_bronzeArray).Concat(_silverArray).ToArray();
+            //}
 
-            if (fishingRod == _goldFishingRod)
-            {
-                _currentArray = new FishAsset[_defaultArray.Length];
-                _currentArray = _defaultArray.Concat(_bronzeArray).Concat(_silverArray).Concat(_goldArray).ToArray();
-            }
+            //if (fishingRod == _goldFishingRod)
+            //{
+            //    _currentArray = new FishAsset[_defaultArray.Length];
+            //    _currentArray = _defaultArray.Concat(_bronzeArray).Concat(_silverArray).Concat(_goldArray).ToArray();
+            //}
         }
     }
 }

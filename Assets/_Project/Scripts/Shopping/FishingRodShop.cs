@@ -16,7 +16,7 @@
 //            {
 //                _player = collision;
 
-//                Player.Instance.Ship.SendFishingRodShopMessage(true);
+//                //Player.Instance.Ship.SendFishingRodShopMessage(true);
 //            }
 //        }
 

@@ -19,7 +19,7 @@ namespace CthulhuGame
 
         [SerializeField] private SpawnMode _spawnMode;
         [SerializeField] private GameObject _prefab;
-        [SerializeField] private CircleArea _area;
+        [SerializeField] private SphereArea _area;
         [SerializeField] private bool _entityIsTurnedToRandomAngle;
         [SerializeField] private float _respawnTime;
         [SerializeField] protected int _numSpawns;

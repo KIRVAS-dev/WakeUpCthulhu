@@ -19,7 +19,7 @@ namespace CthulhuGame
 
         [SerializeField] private Fish _fishPrefab;
         [SerializeField] private FishPool _fishPoolPrefab;
-        [SerializeField] private GameObject _bubbles;
+        //[SerializeField] private GameObject _bubbles;
         [SerializeField] private SpriteRenderer _circleOfFish;
         [SerializeField] private Sprite[] _cirleSprites;
         [SerializeField] private Rotator _rotation;
@@ -30,7 +30,7 @@ namespace CthulhuGame
         #region UnityEvents      
         private void Start()
         {
-            _bubbles.gameObject.SetActive(false);        
+            //_bubbles.gameObject.SetActive(false);        
             _circleOfFish.enabled = true;
             _rotation.enabled = true;
 
@@ -47,13 +47,13 @@ namespace CthulhuGame
 
             _allFishingPoints.Add(this);          
             
-            FishingChallenge.Instance.OnEnable += SetBubblesAnimationActive;
+            //FishingChallenge.Instance.OnEnable += SetBubblesAnimationActive;
             FishingChallenge.Instance.OnTryCatchFish += ShowCatchedFish;
         }
 
         private void OnDestroy()
         {
-            FishingChallenge.Instance.OnEnable -= SetBubblesAnimationActive;
+            //FishingChallenge.Instance.OnEnable -= SetBubblesAnimationActive;
             FishingChallenge.Instance.OnTryCatchFish -= ShowCatchedFish;       
         }
         #endregion
@@ -123,7 +123,7 @@ namespace CthulhuGame
         {
             if (_isActive)
             {
-                _bubbles.gameObject.SetActive(true);
+                //_bubbles.gameObject.SetActive(true);
                 _circleOfFish.enabled = false;
                 _rotation.enabled = false;
             }

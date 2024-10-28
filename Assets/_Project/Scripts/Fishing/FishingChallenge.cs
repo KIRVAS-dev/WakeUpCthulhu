@@ -13,6 +13,7 @@ namespace CthulhuGame
         //[SerializeField] private Canvas _inputCanvas;
         [SerializeField] private Image _fishCircleImage;
         [SerializeField] private Image _playerCircleImage;        
+        //[SerializeField] private Image _fishigRodImage;        
 
         private Vector3 _defaultPlayerScale;    
 

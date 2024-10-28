@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 535224614841097417}
   serializedVersion: 2
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -157,7 +157,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _fishPrefab: {fileID: 6598858716521727138, guid: 7418af5ff6d345246bbe323c3c0c6d58, type: 3}
   _fishPoolPrefab: {fileID: 5846408836929949484, guid: 84370d02a95e474488ce6a1b11ee9fac, type: 3}
-  _bubbles: {fileID: 0}
   _circleOfFish: {fileID: 1792826444366737886}
   _cirleSprites:
   - {fileID: 21300000, guid: 04fb4ddf4d114b64cb008dd2674ad663, type: 3}
@@ -181,4 +180,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _targetTransform: {fileID: 7675913269352619063}
-  _speed: {x: 0, y: 0, z: 15}
+  _speed: {x: 0, y: -15, z: 0}

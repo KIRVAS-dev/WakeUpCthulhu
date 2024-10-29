@@ -42,7 +42,14 @@ namespace CthulhuGame
 
         private void Update()
         {
-            DoCircleAnimation();
+            if (ActionButton.Instance.Type == ActionButton.ActionType.CatchFish)
+            {
+                DoCircleAnimation();
+            }
+            else
+            {
+                Deactivate();
+            }
         }
         #endregion
 

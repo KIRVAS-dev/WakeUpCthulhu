@@ -18,9 +18,9 @@ namespace CthulhuGame
 
             _image.sprite = sprite.sprite;
             _name.text = fish.Name;
+            _cost.text = $"{fish.Cost} монет";
+            _weight.text = $"{fish.Weight} кг";
             _description.text = fish.Description;
-            _weight.text = fish.Weight.ToString();
-            _cost.text = fish.Cost.ToString();
         }
     }
 }

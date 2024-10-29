@@ -13,6 +13,16 @@ namespace CthulhuGame
       
         public event Action<int> OnFishCaught;
 
+        private void Start()
+        {
+            Player.Instance.Ship.Health.OnDeath += ClearContainer;
+        }
+
+        private void OnDestroy()
+        {
+            Player.Instance.Ship.Health.OnDeath -= ClearContainer;
+        }
+
         public void ChangeWeightAmount(int amount)
         {
             _totalFishWeight += amount;

@@ -10,6 +10,23 @@ namespace CthulhuGame
 
         public event Action OnMoneyChanged;
 
+        #region UnityEvents
+        private void Start()
+        {
+            Player.Instance.Ship.Health.OnDeath += RestoreMoney;
+        }
+
+        private void OnDestroy()
+        {
+            Player.Instance.Ship.Health.OnDeath -= RestoreMoney;
+        }
+        #endregion;
+
+        private void RestoreMoney()
+        {
+            _currentMoney = 0;
+        }
+
         public void TryChangeMoneyAmount(int amount)
         {            
             if (amount != 0)
@@ -23,6 +40,6 @@ namespace CthulhuGame
                     OnMoneyChanged?.Invoke();
                 }
             }
-        }
+        } 
     }
 }

@@ -44,7 +44,7 @@ namespace CthulhuGame
         {
             if (_health.CurrentHealth < _health.MaxHealth)
             {
-                int currentRepairCost = _cost * _health.CurrentHealth / _health.MaxHealth;
+                int currentRepairCost = (_health.MaxHealth - _health.CurrentHealth) * _cost;
                 return currentRepairCost;
             }
             else

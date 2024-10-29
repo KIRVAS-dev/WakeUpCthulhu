@@ -57,7 +57,7 @@ namespace CthulhuGame
             var cost = Player.Instance.Ship.FishContainer.Cost;
             var weight = Player.Instance.Ship.FishContainer.Weight;
 
-            _text.text = $"Поймано {weight} кг рыбы общей стоимостью {cost} монет"; // Временный текст.
+            _text.text = $"Поймано {weight} кг рыбы на {cost} монет"; // Временный текст.
         }
 
         private void CloseMarket()

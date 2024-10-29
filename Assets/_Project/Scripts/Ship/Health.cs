@@ -3,40 +3,22 @@ using System;
 
 namespace CthulhuGame
 {
-    /// <summary>
-    /// Здоровье корабля.
-    /// </summary>
     public class Health : MonoBehaviour
     {
-        /// <summary>
-        /// Максимально допустимое значение здоровья корабля.
-        /// </summary>
         [SerializeField] private int _maxHealth;
         public int MaxHealth => _maxHealth;
 
-        /// <summary>
-        /// Текущее значение здоровья корабля.
-        /// </summary>
         [SerializeField] private int _currentHealth;
         public int CurrentHealth => _currentHealth;
 
         [Header("Collisions")]
 
-        /// <summary>
-        /// Минимальный обязательный урон при столкновениях.
-        /// </summary>
         [SerializeField] private int _damageConstant;
         public int DamageConstant => _damageConstant;
 
-        /// <summary>
-        /// Множитель урона при столкновениях.
-        /// </summary>
         [SerializeField] private float _damageMultiplier;
         public float DamageMultiplier => _damageMultiplier;
 
-        /// <summary>
-        /// Неуязвимость к урону.
-        /// </summary>
         [SerializeField] private bool _isIndestructible;     
 
         public event Action OnHealthChanged;
@@ -45,10 +27,13 @@ namespace CthulhuGame
         #region UnityEvents
         private void Start()
         {
-            RestoreHealth(); // Заменить на загрузку сохраненного показателя здоровья.
+            if (_currentHealth <= 0)
+            {
+                RestoreHealth();
+            }
         }
 
-        private void OnCollisionEnter2D(Collision2D collision)
+        private void OnCollisionEnter(Collision collision)
         {
             if (!_isIndestructible)
             {
@@ -66,13 +51,11 @@ namespace CthulhuGame
             {
                 _currentHealth = Mathf.Clamp(_currentHealth + amount, 0, _maxHealth);
 
+                OnHealthChanged?.Invoke();
+
                 if (_currentHealth == 0)
                 {
                     OnDeath?.Invoke();
-                }
-                else
-                {
-                    OnHealthChanged?.Invoke();
                 }
             }
         }

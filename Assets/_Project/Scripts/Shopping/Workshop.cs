@@ -2,21 +2,15 @@ using UnityEngine;
 
 namespace CthulhuGame
 {
-    /// <summary>
-    /// Мастерская, где можно отремонтировать лодку игрока.
-    /// </summary>
     public class Workshop : MonoBehaviour
     {
-        /// <summary>
-        /// Стоимость полной починки корабля. 
-        /// </summary>
         [SerializeField] private int _repairCost;
         
         private static Health _health;
 
         private static int _cost;
 
-        private Collider2D _player;
+        private Collider _player;
 
         #region UnityEvents
         private void Start()
@@ -25,7 +19,7 @@ namespace CthulhuGame
             _cost = _repairCost;
         }
 
-        private void OnTriggerEnter2D(Collider2D collision)
+        private void OnTriggerEnter(Collider collision)
         {
             if (collision.gameObject.CompareTag("Player")) // Временное решение.
             {
@@ -35,7 +29,7 @@ namespace CthulhuGame
             }
         }
 
-        private void OnTriggerExit2D(Collider2D collision)
+        private void OnTriggerExit(Collider collision)
         {
             if (collision == _player) // Временное решение.
             {
@@ -46,9 +40,6 @@ namespace CthulhuGame
         }
         #endregion
 
-        /// <summary>
-        /// Стоимость починки корабля с учетом повреждений.
-        /// </summary>
         public static int CurrentRepairCost()
         {
             if (_health.CurrentHealth < _health.MaxHealth)
@@ -62,9 +53,6 @@ namespace CthulhuGame
             }
         }
 
-        /// <summary>
-        /// Отремонтировать корабль за определенную стоимость.
-        /// </summary>
         public static void TryRepairShip()
         {
             if (CurrentRepairCost() > 0)

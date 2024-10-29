@@ -1,47 +1,35 @@
 using CthulhuGame;
 using UnityEngine;
-using UnityEngine.UI;
 
+[RequireComponent(typeof(AudioSource))]
 public class CastingAFishingRodSound : MonoBehaviour
 {
-    [Tooltip("Первый аудиоклип для воспроизведения")]
-    public AudioClip castingAFishingRod;
+    [SerializeField] private AudioClip castingAFishingRod;
+    [SerializeField] private AudioClip pullTheFishingRod;
+    [SerializeField] private AudioSource audioSource;
 
-    [Tooltip("Второй аудиоклип для воспроизведения")]
-    public AudioClip pullTheFishingRod;
-
-    [Tooltip("Аудиоисточник для воспроизведения звуков")]
-    public AudioSource audioSource;
-
-    [Tooltip("Кнопка, при нажатии на которую будут воспроизводиться звуки")]
-    public Button playButton;
-
-    private bool playFirstSound = true; // Флаг для определения, какой звук воспроизводить
-
+    #region UnityEvents
     void Start()
     {
-        // Убедитесь, что кнопка и аудиоисточник назначены
-        if (playButton != null && audioSource != null)
-        {
-            // Добавляем слушатель на кнопку
-            playButton.onClick.AddListener(OnButtonClick);
-        }
+        ActionButton.Instance.OnActionButtonClicked += OnButtonClick;
     }
+
+    private void OnDestroy()
+    {
+        ActionButton.Instance.OnActionButtonClicked -= OnButtonClick;
+    }
+    #endregion
 
     void OnButtonClick()
     {
-        if (playFirstSound)
+        if (ActionButton.Instance.Type == ActionButton.ActionType.FishingChallenge)
         {
-            // Воспроизводим первый звук
             audioSource.PlayOneShot(castingAFishingRod);
         }
-        else
+
+        if (ActionButton.Instance.Type == ActionButton.ActionType.CatchFish)
         {
-            // Воспроизводим второй звук
             audioSource.PlayOneShot(pullTheFishingRod);
         }
-
-        // Переключаем флаг
-        playFirstSound = !playFirstSound;
-    }
+    }    
 }

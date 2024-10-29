@@ -3,9 +3,6 @@ using UnityEngine.UI;
 
 namespace CthulhuGame
 {
-    /// <summary>
-    /// Отображает здоровье корабля игрока в интерфейсе.
-    /// </summary>
     public class HealthUI : MonoBehaviour
     {
         [SerializeField] private Image _image;
@@ -18,13 +15,13 @@ namespace CthulhuGame
 
         private void Start()
         {
-            //Player.Instance.Ship.OnShipInitialized += UpdateImage;
+            UpdateImage();
             Player.Instance.Ship.Health.OnHealthChanged += UpdateImage;
         }
 
         private void OnDestroy()
         {
-            //Player.Instance.Ship.OnShipInitialized -= UpdateImage;
+            UpdateImage();
             Player.Instance.Ship.Health.OnHealthChanged -= UpdateImage;
         }
         #endregion

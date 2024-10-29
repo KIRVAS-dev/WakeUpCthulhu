@@ -3,9 +3,6 @@ using System;
 
 namespace CthulhuGame
 {
-    /// <summary>
-    /// Класс отвечающий за приход или расход денег игрока.
-    /// </summary>
     public class Money : MonoBehaviour
     {
         [SerializeField] private int _currentMoney;

@@ -72,9 +72,6 @@ namespace CthulhuGame
         }
 
 #if UNITY_EDITOR      
-        /// <summary>
-        /// Для удобства Помогает отобразить радиус действия удочки на сцене.
-        /// </summary>
         private void OnDrawGizmosSelected()
         {
             Gizmos.color = Color.green;
@@ -141,6 +138,15 @@ namespace CthulhuGame
                 Player.Instance.Ship.FishContainer.ChangeWeightAmount(_сaughtFish.Weight);
                 Player.Instance.Ship.FishContainer.ChangeCostAmount(_сaughtFish.Cost);
             }
+        }
+
+        public void ResetActiveFishingPoint()
+        {
+            _isTriggered = false;
+            _activeFishingPoint.SetActive(false);
+            _activeFishingPoint = null;
+
+            OnFishingPlaceNearby?.Invoke(false);
         }
     }
 }

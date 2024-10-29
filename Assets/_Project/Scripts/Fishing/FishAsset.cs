@@ -2,9 +2,6 @@ using UnityEngine;
 
 namespace CthulhuGame
 {
-    /// <summary>
-    /// Скрипт создани¤ разных видов рыбы.
-    /// </summary>
     [CreateAssetMenu]
     public class FishAsset : ScriptableObject
     {

@@ -3,15 +3,12 @@ using System;
 
 namespace CthulhuGame
 {
-    /// <summary>
-    /// Рынок, на котором игрок может продать рыбу и купить апгрейды.
-    /// </summary>
     public class Market : MonoBehaviour
     {
-        private Collider2D _player;
+        private Collider _player;
 
         #region UnityEvents
-        private void OnTriggerEnter2D(Collider2D collision)
+        private void OnTriggerEnter(Collider collision)
         {
             if (collision.gameObject.CompareTag("Player")) // Attention!
             {
@@ -21,7 +18,7 @@ namespace CthulhuGame
             }
         }
 
-        private void OnTriggerExit2D(Collider2D collision)
+        private void OnTriggerExit(Collider collision)
         {
             if (collision == _player) // Attention!
             {

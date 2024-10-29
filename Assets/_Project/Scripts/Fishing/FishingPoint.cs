@@ -4,14 +4,8 @@ using System;
 
 namespace CthulhuGame
 {
-    /// <summary>
-    /// Место, в котором можно ловить рыбу. На данный момент визуально отображается в виде зацикленной анимации пузырьков.
-    /// </summary>
     public class FishingPoint : MonoBehaviour
     {
-        /// <summary>
-        /// Лист всех экземпляров класса, в который при создании добавляется каждый новый FishingPoint. 
-        /// </summary>
         private static HashSet<FishingPoint> _allFishingPoints;
         public static IReadOnlyCollection<FishingPoint> AllFishingPoints => _allFishingPoints;
 
@@ -19,7 +13,6 @@ namespace CthulhuGame
 
         [SerializeField] private Fish _fishPrefab;
         [SerializeField] private FishPool _fishPoolPrefab;
-        //[SerializeField] private GameObject _bubbles;
         [SerializeField] private SpriteRenderer _circleOfFish;
         [SerializeField] private Sprite[] _cirleSprites;
         [SerializeField] private Rotator _rotation;
@@ -30,7 +23,6 @@ namespace CthulhuGame
         #region UnityEvents      
         private void Start()
         {
-            //_bubbles.gameObject.SetActive(false);        
             _circleOfFish.enabled = true;
             _rotation.enabled = true;
 
@@ -47,21 +39,15 @@ namespace CthulhuGame
 
             _allFishingPoints.Add(this);          
             
-            //FishingChallenge.Instance.OnEnable += SetBubblesAnimationActive;
             FishingChallenge.Instance.OnTryCatchFish += ShowCatchedFish;
         }
 
         private void OnDestroy()
         {
-            //FishingChallenge.Instance.OnEnable -= SetBubblesAnimationActive;
             FishingChallenge.Instance.OnTryCatchFish -= ShowCatchedFish;       
         }
         #endregion
 
-        /// <summary>
-        /// Рандомом получает случайный результат в виде полезной рыбы или "сапога".
-        /// </summary>
-        /// <param name="success"></param>
         private void ShowCatchedFish(bool success)
         {
             if (_isActive)
@@ -71,11 +57,9 @@ namespace CthulhuGame
                     _fish = Instantiate(_fishPrefab, transform.position, Quaternion.identity);
                     _fish.Sprite.enabled = false; // Attention!
                     
-                    _fishPoolPrefab.Initialize();
-
-                    if (DropProbability.Value <= 10) // Шанс поймать мусор - 10%.
+                    if (DropProbability.Value <= 10) // Шанс поймать артефакт - 10%.
                     {
-                        var garbage = _fishPoolPrefab.GarbageArray;
+                        var garbage = _fishPoolPrefab.ArtifactArray;
                         if (garbage.Length > 0)
                         {
                             int index = UnityEngine.Random.Range(0, garbage.Length);
@@ -84,7 +68,7 @@ namespace CthulhuGame
                     }
                     else
                     {
-                        var fish = _fishPoolPrefab.CurrentArray;
+                        var fish = _fishPoolPrefab.FishArray;
                         if (fish.Length > 0)
                         {
                             int index = UnityEngine.Random.Range(0, fish.Length);
@@ -114,19 +98,11 @@ namespace CthulhuGame
 
             _allFishingPoints.Remove(this);
 
+            Player.Instance.FishingRod.ResetActiveFishingPoint();
+
             OnFishPointDestroy?.Invoke();
 
             Destroy(gameObject);          
-        }
-
-        private void SetBubblesAnimationActive()
-        {
-            if (_isActive)
-            {
-                //_bubbles.gameObject.SetActive(true);
-                _circleOfFish.enabled = false;
-                _rotation.enabled = false;
-            }
         }
 
         public void SetActive(bool value)

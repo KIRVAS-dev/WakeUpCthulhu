@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66d8f451422da4a4f871eefae4bf9bca, type: 3}
   m_Name: Fish_boot
   m_EditorClassIdentifier: 
-  Sprite: {fileID: 21300000, guid: 207acba764c9c0343960caa782cc2f74, type: 3}
-  Name: "\u0421\u0430\u043F\u043E\u0433 \u0410\u043D\u0436\u0435\u043B\u0438\u043A\u0438"
-  Description: "\u041B\u0435\u0432\u044B\u0439"
+  Sprite: {fileID: 21300000, guid: e750520e3fb2cff40a8ffd3ad4075d3a, type: 3}
+  Name: "\u0417\u0430\u043F\u0438\u0441\u043A\u0430"
+  Description: "\u0422\u0430\u0438\u043D\u0441\u0442\u0432\u0435\u043D\u043D\u043E\u0435
+    \u043F\u043E\u0441\u043B\u0430\u043D\u0438\u0435"
   Cost: 0
-  Weight: 5
+  Weight: 1

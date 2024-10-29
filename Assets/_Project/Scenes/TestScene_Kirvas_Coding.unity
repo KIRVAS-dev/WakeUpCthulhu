@@ -334,7 +334,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d23d055357c44f449be7be8303cb90b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _repairCost: 10
+  _repairCost: 1
 --- !u!65 &2132514088
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -350,7 +350,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -473,7 +473,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3687473590877329231, guid: c1530327571bc3147a666a13d86d9061, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9086166434632317472, guid: c1530327571bc3147a666a13d86d9061, type: 3}
       propertyPath: m_LocalPosition.x

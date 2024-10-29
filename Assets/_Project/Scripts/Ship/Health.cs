@@ -27,10 +27,13 @@ namespace CthulhuGame
         #region UnityEvents
         private void Start()
         {
-            RestoreHealth(); // Заменить на загрузку сохраненного показателя здоровья.
+            if (_currentHealth <= 0)
+            {
+                RestoreHealth();
+            }
         }
 
-        private void OnCollisionEnter2D(Collision2D collision)
+        private void OnCollisionEnter(Collision collision)
         {
             if (!_isIndestructible)
             {
@@ -48,13 +51,11 @@ namespace CthulhuGame
             {
                 _currentHealth = Mathf.Clamp(_currentHealth + amount, 0, _maxHealth);
 
+                OnHealthChanged?.Invoke();
+
                 if (_currentHealth == 0)
                 {
                     OnDeath?.Invoke();
-                }
-                else
-                {
-                    OnHealthChanged?.Invoke();
                 }
             }
         }

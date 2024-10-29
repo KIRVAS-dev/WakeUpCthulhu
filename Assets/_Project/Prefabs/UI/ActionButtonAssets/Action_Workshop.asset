@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Image: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
   Color: {r: 0.050980393, g: 0.9529412, b: 0.06666667, a: 1}
-  Text: "\u0417\u0410\u0419\u0422\u0418 \u0412 \u041C\u0410\u0421\u0422\u0415\u0420\u0421\u041A\u0423\u042E"
+  Text: "\u041C\u0410\u0421\u0422\u0415\u0420\u0421\u041A\u0410\u042F"
   RaycastTarget: 1

@@ -154,7 +154,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -350,7 +350,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -587,6 +587,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 362409988458689798, guid: 473713f91706adb4384b8a11d02940f5, type: 3}
+      propertyPath: _currentMoney
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 2239563024338330765, guid: 473713f91706adb4384b8a11d02940f5, type: 3}
       propertyPath: playButton
       value: 
@@ -625,11 +629,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8219083843247843930, guid: 473713f91706adb4384b8a11d02940f5, type: 3}
       propertyPath: _currentHealth
-      value: 0
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 8388460387020762653, guid: 473713f91706adb4384b8a11d02940f5, type: 3}
       propertyPath: _currentWeight
-      value: 0
+      value: 50
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

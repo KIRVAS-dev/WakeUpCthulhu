@@ -21,15 +21,18 @@ public class CastingAFishingRodSound : MonoBehaviour
 
     void OnButtonClick()
     {
-        if (playFirstSound)
+        if (ActionButton.Instance.Type == ActionButton.ActionType.FishingChallenge)
         {
-            audioSource.PlayOneShot(castingAFishingRod);
-        }
-        else
-        {
-            audioSource.PlayOneShot(pullTheFishingRod);
-        }
+            if (playFirstSound)
+            {
+                audioSource.PlayOneShot(castingAFishingRod);
+            }
+            else
+            {
+                audioSource.PlayOneShot(pullTheFishingRod);
+            }
 
-        playFirstSound = !playFirstSound;
+            playFirstSound = !playFirstSound;
+        }
     }
 }

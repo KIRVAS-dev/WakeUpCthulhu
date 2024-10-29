@@ -10,7 +10,7 @@ namespace CthulhuGame
 
         private static int _cost;
 
-        private Collider2D _player;
+        private Collider _player;
 
         #region UnityEvents
         private void Start()
@@ -19,7 +19,7 @@ namespace CthulhuGame
             _cost = _repairCost;
         }
 
-        private void OnTriggerEnter2D(Collider2D collision)
+        private void OnTriggerEnter(Collider collision)
         {
             if (collision.gameObject.CompareTag("Player")) // Временное решение.
             {
@@ -29,7 +29,7 @@ namespace CthulhuGame
             }
         }
 
-        private void OnTriggerExit2D(Collider2D collision)
+        private void OnTriggerExit(Collider collision)
         {
             if (collision == _player) // Временное решение.
             {

@@ -15,6 +15,7 @@ namespace CthulhuGame
         }
 
         [SerializeField] private ActionType _type;
+        public ActionType Type => _type;
 
         [Header("Target components")]
         [SerializeField] private Button _button;

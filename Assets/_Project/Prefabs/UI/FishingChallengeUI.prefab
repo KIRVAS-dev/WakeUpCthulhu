@@ -236,7 +236,7 @@ GameObject:
   - component: {fileID: 3054859869303507618}
   - component: {fileID: 762753691275771237}
   m_Layer: 0
-  m_Name: FishingChallenge
+  m_Name: FishingChallengeUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

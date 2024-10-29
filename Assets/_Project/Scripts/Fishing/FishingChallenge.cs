@@ -21,7 +21,7 @@ namespace CthulhuGame
         private readonly float _passScaleMax = 4f;
 
         private readonly float _minSpeed = 1f;
-        private readonly float _defaultSpeed = 4f;
+        private readonly float _defaultSpeed = 6f; //4f
 
         private float _scale;
         private float _speed;

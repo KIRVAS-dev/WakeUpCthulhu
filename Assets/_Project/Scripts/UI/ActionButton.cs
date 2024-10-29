@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -34,6 +35,8 @@ namespace CthulhuGame
         [SerializeField] private ActionButtonAsset _catchFish;
         [SerializeField] private ActionButtonAsset _market;
         [SerializeField] private ActionButtonAsset _workshop;
+
+        public event Action OnActionButtonClicked;
 
         #region UnityEvents
         private void Start()
@@ -93,6 +96,8 @@ namespace CthulhuGame
 
         private void DoAction()
         {
+            OnActionButtonClicked?.Invoke();
+
             switch (_type)
             {
                 case ActionType.None:
@@ -129,6 +134,8 @@ namespace CthulhuGame
 
                     break;
             }
+
+            
         }
 
         private void DoOnFishingPlaceNearby(bool nearby)

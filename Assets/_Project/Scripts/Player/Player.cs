@@ -16,8 +16,6 @@ namespace CthulhuGame
         [SerializeField] private PrometeoCarController _playerController;
         public PrometeoCarController PlayerController => _playerController;
 
-        [SerializeField] private ShipRestorer _shipRestorer;
-        public ShipRestorer ShipRestorer => _shipRestorer;
 
         public void GiveControlsToPlayer()
         {

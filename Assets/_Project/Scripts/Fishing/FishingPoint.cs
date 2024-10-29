@@ -39,13 +39,11 @@ namespace CthulhuGame
 
             _allFishingPoints.Add(this);          
             
-            FishingChallenge.Instance.OnEnable += SetBubblesAnimationActive;
             FishingChallenge.Instance.OnTryCatchFish += ShowCatchedFish;
         }
 
         private void OnDestroy()
         {
-            FishingChallenge.Instance.OnEnable -= SetBubblesAnimationActive;
             FishingChallenge.Instance.OnTryCatchFish -= ShowCatchedFish;       
         }
         #endregion
@@ -59,9 +57,9 @@ namespace CthulhuGame
                     _fish = Instantiate(_fishPrefab, transform.position, Quaternion.identity);
                     _fish.Sprite.enabled = false; // Attention!
                     
-                    if (DropProbability.Value <= 10) // Шанс поймать мусор - 10%.
+                    if (DropProbability.Value <= 10) // Шанс поймать артефакт - 10%.
                     {
-                        var garbage = _fishPoolPrefab.GarbageArray;
+                        var garbage = _fishPoolPrefab.ArtifactArray;
                         if (garbage.Length > 0)
                         {
                             int index = UnityEngine.Random.Range(0, garbage.Length);
@@ -70,7 +68,7 @@ namespace CthulhuGame
                     }
                     else
                     {
-                        var fish = _fishPoolPrefab.CurrentArray;
+                        var fish = _fishPoolPrefab.FishArray;
                         if (fish.Length > 0)
                         {
                             int index = UnityEngine.Random.Range(0, fish.Length);
@@ -103,15 +101,6 @@ namespace CthulhuGame
             OnFishPointDestroy?.Invoke();
 
             Destroy(gameObject);          
-        }
-
-        private void SetBubblesAnimationActive()
-        {
-            if (_isActive)
-            {
-                _circleOfFish.enabled = false;
-                _rotation.enabled = false;
-            }
         }
 
         public void SetActive(bool value)

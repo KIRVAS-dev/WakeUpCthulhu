@@ -4,11 +4,12 @@ namespace CthulhuGame
 {
     public class FishPool : MonoBehaviour
     {
-        [Header("Garbage fish")]
-        [SerializeField] private FishAsset[] _garbageArray;
-        public FishAsset[] GarbageArray => _garbageArray;
+        [Header("Fish")]
+        [SerializeField] private FishAsset[] _fishArray;
+        public FishAsset[] FishArray => _fishArray;
 
-        private FishAsset[] _currentArray;
-        public FishAsset[] CurrentArray => _currentArray;
+        [Header("Artifact")]
+        [SerializeField] private FishAsset[] _artifactArray;
+        public FishAsset[] ArtifactArray => _artifactArray;
     }
 }

@@ -245,7 +245,7 @@ Light:
   m_CorrespondingSourceObject: {fileID: 7111161976053771364, guid: f4b0eb5fabb150c4ca616927c10ab218, type: 3}
   m_PrefabInstance: {fileID: 7665006806579137903}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &1159887415
+--- !u!1001 &1100807660
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -629,7 +629,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8388460387020762653, guid: 473713f91706adb4384b8a11d02940f5, type: 3}
       propertyPath: _currentWeight
-      value: 0
+      value: 99
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -942,7 +942,7 @@ SceneRoots:
   m_Roots:
   - {fileID: 721129215013856104}
   - {fileID: 470148792748919158}
-  - {fileID: 1159887415}
+  - {fileID: 1100807660}
   - {fileID: 229568685487015069}
   - {fileID: 7665006806579137903}
   - {fileID: 431696663967821881}

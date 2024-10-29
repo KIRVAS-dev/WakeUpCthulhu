@@ -20,6 +20,9 @@ namespace CthulhuGame
         [SerializeField] private FishContainer _fishContainer;
         public FishContainer FishContainer => _fishContainer;
 
+        [SerializeField] private AudioSource _engineSound;
+        public AudioSource EngineSound => _engineSound;
+
         public event Action<bool> OnMarketNearby;
         public event Action<bool> OnWorkshopNearby;
         public event Action OnWeightChanged;

@@ -704,6 +704,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5467531146934628473, guid: 77925dcfcb20dbb4fb379162f0bdd5ca, type: 3}
+      propertyPath: m_Text
+      value: "\u041C\u041E\u041D\u0415\u0422\u042B \u041A\u0422\u0423\u041B\u0425\u0423"
+      objectReference: {fileID: 0}
     - target: {fileID: 5543773262208443462, guid: 77925dcfcb20dbb4fb379162f0bdd5ca, type: 3}
       propertyPath: m_IsActive
       value: 1

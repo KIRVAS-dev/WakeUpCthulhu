@@ -49,6 +49,7 @@ namespace CthulhuGame
 
             CheckButtonAppearance();
             UpdateText();
+            CloseMarket();//
         }
 
         private void UpdateText()

@@ -98,6 +98,8 @@ namespace CthulhuGame
 
             _allFishingPoints.Remove(this);
 
+            Player.Instance.FishingRod.ResetActiveFishingPoint();
+
             OnFishPointDestroy?.Invoke();
 
             Destroy(gameObject);          

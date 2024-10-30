@@ -110,7 +110,7 @@ AudioSource:
   m_GameObject: {fileID: 966301907828734072}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -3310317866915710461, guid: 9fbaf0896a2f0d947be15832bba65510, type: 2}
   m_audioClip: {fileID: 8300000, guid: 69ef564703389dd4d918fdefe5c6f0f9, type: 3}
   m_Resource: {fileID: 8300000, guid: 69ef564703389dd4d918fdefe5c6f0f9, type: 3}
   m_PlayOnAwake: 1
@@ -652,6 +652,7 @@ MonoBehaviour:
   _currentWeight: 0
   _health: {fileID: 7553785752827225437}
   _fishContainer: {fileID: 53561910784983691}
+  _engineSound: {fileID: 0}
 --- !u!114 &7553785752827225437
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1279,6 +1280,10 @@ PrefabInstance:
       propertyPath: m_Radius
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 6638694105050327532, guid: 97d818554ddafa74797bf5052f9f53df, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: -561133675248626958, guid: 9fbaf0896a2f0d947be15832bba65510, type: 2}
     - target: {fileID: 7792044433145777342, guid: 97d818554ddafa74797bf5052f9f53df, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

@@ -9,6 +9,7 @@ namespace CthulhuGame
     public class WorkshopUI : MonoBehaviour
     {
         [SerializeField] private GameObject _canvasPanel;
+        [SerializeField] private Image _image;
         [SerializeField] private Button _repairButton;
         [SerializeField] private Button _closeButton;
         [SerializeField] private Button _actionButton;
@@ -18,6 +19,7 @@ namespace CthulhuGame
         private void Start()
         {
             _canvasPanel.SetActive(false);
+            _image.enabled = false;
 
             _repairButton.onClick.AddListener(RepairShip);
             _closeButton.onClick.AddListener(CloseWorkshop);
@@ -61,6 +63,8 @@ namespace CthulhuGame
 
         private void CloseWorkshop()
         {
+            _image.enabled = false;
+            
             _canvasPanel.SetActive(false);
             _actionButton.gameObject.SetActive(true);
 
@@ -69,6 +73,8 @@ namespace CthulhuGame
 
         public void OpenWorkshop()
         {
+            _image.enabled=true;
+            
             _canvasPanel.SetActive(true);
             _actionButton.gameObject.SetActive(false);
 

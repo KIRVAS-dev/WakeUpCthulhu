@@ -9,6 +9,7 @@ namespace CthulhuGame
     public class MarketUI : MonoBehaviour
     {
         [SerializeField] private GameObject _canvasPanel;
+        [SerializeField] private Image _image;
         [SerializeField] private Button _sellButton;
         [SerializeField] private Button _closeButton;
         [SerializeField] private Button _actionButton;
@@ -17,6 +18,8 @@ namespace CthulhuGame
         #region UnityEvents
         private void Start()
         {
+            _image.enabled = false;
+            
             _canvasPanel.SetActive(false);
             
             _sellButton.onClick.AddListener(SellFish);
@@ -62,6 +65,8 @@ namespace CthulhuGame
 
         private void CloseMarket()
         {
+            _image.enabled = false;
+
             _canvasPanel.SetActive(false);
             _actionButton.gameObject.SetActive(true);
 
@@ -70,6 +75,8 @@ namespace CthulhuGame
 
         public void OpenMarket()
         {
+            _image.enabled = true;
+
             _canvasPanel.SetActive(true);
             _actionButton.gameObject.SetActive(false);
 

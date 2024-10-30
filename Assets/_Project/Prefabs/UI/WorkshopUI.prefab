@@ -1086,6 +1086,7 @@ GameObject:
   - component: {fileID: 1324115571580903441}
   - component: {fileID: 855184712684684186}
   - component: {fileID: 8911160016975208877}
+  - component: {fileID: 8846090125168994865}
   m_Layer: 5
   m_Name: WorkshopUI
   m_TagString: Untagged
@@ -1139,6 +1140,22 @@ MonoBehaviour:
   _closeButton: {fileID: 735015706240415024}
   _actionButton: {fileID: 0}
   _text: {fileID: 937000664981036977}
+--- !u!114 &8846090125168994865
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4356996249711188374}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a97c4bab44d5d184e939c156d062d24d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _characters:
+  - {fileID: 3426455295878438042}
+  - {fileID: 2190937311998180380}
+  _closeButton: {fileID: 735015706240415024}
 --- !u!1 &4594191599294923070
 GameObject:
   m_ObjectHideFlags: 0

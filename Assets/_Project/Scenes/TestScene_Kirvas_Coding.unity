@@ -779,15 +779,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7513849853354153114, guid: 1c6f45f62f12d9741bc3f6df546fe7a7, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7798838850899455888, guid: 1c6f45f62f12d9741bc3f6df546fe7a7, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8075258406286489943, guid: 1c6f45f62f12d9741bc3f6df546fe7a7, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8427162352814426420, guid: 1c6f45f62f12d9741bc3f6df546fe7a7, type: 3}
       propertyPath: m_IsActive
@@ -900,6 +900,10 @@ PrefabInstance:
     - target: {fileID: 9144519392828782364, guid: 4b4f3c4e07cae7945a04738c6e8ce2a3, type: 3}
       propertyPath: m_Name
       value: LevelController
+      objectReference: {fileID: 0}
+    - target: {fileID: 9144519392828782364, guid: 4b4f3c4e07cae7945a04738c6e8ce2a3, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1092,7 +1096,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 94387373881345788, guid: 473713f91706adb4384b8a11d02940f5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -12.1
       objectReference: {fileID: 0}
     - target: {fileID: 94387373881345788, guid: 473713f91706adb4384b8a11d02940f5, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1100,7 +1104,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 94387373881345788, guid: 473713f91706adb4384b8a11d02940f5, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 34.6
       objectReference: {fileID: 0}
     - target: {fileID: 94387373881345788, guid: 473713f91706adb4384b8a11d02940f5, type: 3}
       propertyPath: m_LocalRotation.w

@@ -1,36 +1,31 @@
 using CthulhuGame;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class GameObjectActivator : MonoBehaviour
 {
-    [SerializeField] private GameObject[] _gameObjects;
-    [SerializeField] private Button _closeButton;
-
+    [SerializeField] private Character[] _characters;
+    
     private void Start()
     {
-        DeactivateAllGameObjects();
-
-        _closeButton.onClick.AddListener(DeactivateAllGameObjects);
-        ActionButton.Instance.OnActionButtonClicked += ActivateRandomGameObject;
+        ActionButton.Instance.OnActionButtonClicked += ActivateCharacter;
     }
 
     private void OnDestroy()
     {
-        _closeButton.onClick.RemoveListener(DeactivateAllGameObjects);
-        ActionButton.Instance.OnActionButtonClicked -= ActivateRandomGameObject;
+        ActionButton.Instance.OnActionButtonClicked -= ActivateCharacter;
     }
 
-    private void ActivateRandomGameObject()
+    private void ActivateCharacter()
     {
-        _gameObjects[Random.Range(0, _gameObjects.Length)].SetActive(true);
-    }
-
-    private void DeactivateAllGameObjects()
-    {
-        foreach (var gameObject in _gameObjects)
+        foreach (Character character in _characters)
         {
-            gameObject.SetActive(false);
+            character.gameObject.SetActive(false);
         }
+
+        int rnd = Random.Range(0, _characters.Length);
+
+        _characters[rnd].gameObject.SetActive(true);
+        _characters[rnd].SetDialoguePanelsActive(false);
+        _characters[rnd].ShowRandomDialogue();
     }
 }

@@ -15,11 +15,6 @@ public class CharacterEnabler : MonoBehaviour
         ActionButton.Instance.OnActionButtonClicked += ActivateRandomCharacter;
     }
 
-    private void OnDisable()
-    {
-        DeactivateAllCharacters();
-    }
-
     private void OnDestroy()
     {
         _closeButton.onClick.RemoveListener(DeactivateAllCharacters);

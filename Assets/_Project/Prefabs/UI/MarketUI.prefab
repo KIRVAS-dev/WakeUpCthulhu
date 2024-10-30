@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7739853809708343288}
   - component: {fileID: 4216718961881683990}
+  - component: {fileID: 5974988950118232626}
   m_Layer: 5
   m_Name: CharactersPanel_Seller
   m_TagString: Untagged
@@ -46,6 +47,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 229288192851281598}
   m_CullTransparentMesh: 1
+--- !u!114 &5974988950118232626
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 229288192851281598}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24d252f929b5e464b9ec3d32e1b1f25f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _gameObjects:
+  - {fileID: 5983369151376732542}
+  - {fileID: 7942911525757711988}
+  - {fileID: 1632837887758498941}
+  - {fileID: 1486625130953255743}
+  - {fileID: 3953742274236570913}
+  - {fileID: 5743295752830291917}
+  - {fileID: 6678387217949608402}
+  _closeButton: {fileID: 3221399757591422009}
 --- !u!1 &1475260250913974022
 GameObject:
   m_ObjectHideFlags: 0
@@ -377,7 +399,7 @@ GameObject:
   - component: {fileID: 3812243174972879128}
   - component: {fileID: 3267857512025854611}
   - component: {fileID: 1780647087363511180}
-  - component: {fileID: 440991909495920536}
+  - component: {fileID: 6745779467783692301}
   m_Layer: 5
   m_Name: MarketUI
   m_TagString: Untagged
@@ -431,7 +453,7 @@ MonoBehaviour:
   _closeButton: {fileID: 3221399757591422009}
   _actionButton: {fileID: 0}
   _text: {fileID: 7978682593620318789}
---- !u!114 &440991909495920536
+--- !u!114 &6745779467783692301
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -440,10 +462,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1941284406135113887}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a97c4bab44d5d184e939c156d062d24d, type: 3}
+  m_Script: {fileID: 11500000, guid: 24d252f929b5e464b9ec3d32e1b1f25f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _characters:
+  _gameObjects:
   - {fileID: 229288192851281598}
   - {fileID: 3460184801813917070}
   _closeButton: {fileID: 3221399757591422009}
@@ -733,6 +755,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1928358575579230563}
   - component: {fileID: 4628250409235014189}
+  - component: {fileID: 3016510194962273751}
   m_Layer: 5
   m_Name: CharactersPanel_Woman
   m_TagString: Untagged
@@ -769,6 +792,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3460184801813917070}
   m_CullTransparentMesh: 1
+--- !u!114 &3016510194962273751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3460184801813917070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24d252f929b5e464b9ec3d32e1b1f25f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _gameObjects:
+  - {fileID: 8448232989485085876}
+  - {fileID: 7104801865906215286}
+  - {fileID: 8782356249780307563}
+  _closeButton: {fileID: 3221399757591422009}
 --- !u!1 &3953742274236570913
 GameObject:
   m_ObjectHideFlags: 0

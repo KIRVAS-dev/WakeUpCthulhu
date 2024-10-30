@@ -835,6 +835,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3653647136017398628}
   - component: {fileID: 8941965088497930844}
+  - component: {fileID: 2304192565656213773}
   m_Layer: 5
   m_Name: CharactersPanel_Madman
   m_TagString: Untagged
@@ -871,6 +872,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2190937311998180380}
   m_CullTransparentMesh: 1
+--- !u!114 &2304192565656213773
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2190937311998180380}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24d252f929b5e464b9ec3d32e1b1f25f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _gameObjects:
+  - {fileID: 5363995929020132901}
+  - {fileID: 6079546141255266175}
+  - {fileID: 5292295678110124927}
+  - {fileID: 8118293824543591197}
+  - {fileID: 826104055772031728}
+  _closeButton: {fileID: 735015706240415024}
 --- !u!1 &2680852901162402795
 GameObject:
   m_ObjectHideFlags: 0
@@ -960,6 +980,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1891518977843020029}
   - component: {fileID: 1313256556578843007}
+  - component: {fileID: 3322026447473902553}
   m_Layer: 5
   m_Name: CharactersPanel_Master
   m_TagString: Untagged
@@ -996,6 +1017,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3426455295878438042}
   m_CullTransparentMesh: 1
+--- !u!114 &3322026447473902553
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3426455295878438042}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24d252f929b5e464b9ec3d32e1b1f25f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _gameObjects:
+  - {fileID: 1079870495730815762}
+  - {fileID: 641430325684828470}
+  - {fileID: 9026592118008680274}
+  _closeButton: {fileID: 735015706240415024}
 --- !u!1 &4342136185534656788
 GameObject:
   m_ObjectHideFlags: 0
@@ -1086,7 +1124,7 @@ GameObject:
   - component: {fileID: 1324115571580903441}
   - component: {fileID: 855184712684684186}
   - component: {fileID: 8911160016975208877}
-  - component: {fileID: 8846090125168994865}
+  - component: {fileID: 2187816243067197343}
   m_Layer: 5
   m_Name: WorkshopUI
   m_TagString: Untagged
@@ -1140,7 +1178,7 @@ MonoBehaviour:
   _closeButton: {fileID: 735015706240415024}
   _actionButton: {fileID: 0}
   _text: {fileID: 937000664981036977}
---- !u!114 &8846090125168994865
+--- !u!114 &2187816243067197343
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1149,10 +1187,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 4356996249711188374}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a97c4bab44d5d184e939c156d062d24d, type: 3}
+  m_Script: {fileID: 11500000, guid: 24d252f929b5e464b9ec3d32e1b1f25f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _characters:
+  _gameObjects:
   - {fileID: 3426455295878438042}
   - {fileID: 2190937311998180380}
   _closeButton: {fileID: 735015706240415024}

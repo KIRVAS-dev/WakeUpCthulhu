@@ -585,6 +585,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 2617213364021182562, guid: 1c6f45f62f12d9741bc3f6df546fe7a7, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2796557881365737770, guid: 1c6f45f62f12d9741bc3f6df546fe7a7, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -1138,6 +1142,10 @@ PrefabInstance:
       propertyPath: _currentMoney
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1553435637166802344, guid: 473713f91706adb4384b8a11d02940f5, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2239563024338330765, guid: 473713f91706adb4384b8a11d02940f5, type: 3}
       propertyPath: playButton
       value: 
@@ -1161,6 +1169,14 @@ PrefabInstance:
     - target: {fileID: 5145793500234718127, guid: 473713f91706adb4384b8a11d02940f5, type: 3}
       propertyPath: m_TagString
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 5261963332003412618, guid: 473713f91706adb4384b8a11d02940f5, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 4.48
+      objectReference: {fileID: 0}
+    - target: {fileID: 5261963332003412618, guid: 473713f91706adb4384b8a11d02940f5, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.69
       objectReference: {fileID: 0}
     - target: {fileID: 7755713125844128658, guid: 473713f91706adb4384b8a11d02940f5, type: 3}
       propertyPath: m_Volume
@@ -1206,7 +1222,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3687473590877329231, guid: c1530327571bc3147a666a13d86d9061, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9086166434632317472, guid: c1530327571bc3147a666a13d86d9061, type: 3}
       propertyPath: m_LocalPosition.x

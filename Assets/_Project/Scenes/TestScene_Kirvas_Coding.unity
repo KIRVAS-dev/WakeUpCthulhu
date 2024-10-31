@@ -146,6 +146,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: LevelTemplate_New
       objectReference: {fileID: 0}
+    - target: {fileID: 1873930537001187432, guid: ecef0da2ff3d8d64fa9e4cf78f0b7db1, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: f673ed00eeb6f254788974c11f53fc87, type: 3}
+    - target: {fileID: 2920674179256423993, guid: ecef0da2ff3d8d64fa9e4cf78f0b7db1, type: 3}
+      propertyPath: _targetReputation
+      value: 2000
+      objectReference: {fileID: 0}
     - target: {fileID: 6658896029463035587, guid: ecef0da2ff3d8d64fa9e4cf78f0b7db1, type: 3}
       propertyPath: _storyPanel
       value: 
@@ -189,6 +197,10 @@ PrefabInstance:
     - target: {fileID: 6964817466620992983, guid: ecef0da2ff3d8d64fa9e4cf78f0b7db1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7056703270193281479, guid: ecef0da2ff3d8d64fa9e4cf78f0b7db1, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 460
       objectReference: {fileID: 0}
     - target: {fileID: 8743356875414289906, guid: ecef0da2ff3d8d64fa9e4cf78f0b7db1, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size

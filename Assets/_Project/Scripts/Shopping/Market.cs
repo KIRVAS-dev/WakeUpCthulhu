@@ -37,6 +37,7 @@ namespace CthulhuGame
             Player.Instance.Ship.TryChangeWeightAmount(-Math.Abs(weight));
             Player.Instance.Money.TryChangeMoneyAmount(money);
             Player.Instance.Ship.FishContainer.ClearContainer();
+            Player.Instance.Reputation.TryChangeReputationAmount(money);
         }
     }
 }

@@ -222,6 +222,14 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
       value: ExitGame
       objectReference: {fileID: 0}
+    - target: {fileID: 8067148792356660614, guid: db46aef5b61ffa04da14f9f34d4cf96b, type: 3}
+      propertyPath: _targetReputation
+      value: 3000
+      objectReference: {fileID: 0}
+    - target: {fileID: 8162568529658582595, guid: db46aef5b61ffa04da14f9f34d4cf96b, type: 3}
+      propertyPath: _targetTime
+      value: 900
+      objectReference: {fileID: 0}
     - target: {fileID: 8654801810100110704, guid: db46aef5b61ffa04da14f9f34d4cf96b, type: 3}
       propertyPath: m_Name
       value: Level_Final

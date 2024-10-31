@@ -7,6 +7,8 @@ public class LevelController : SingletonBase<LevelController>
     [SerializeField] private GameObject _startGamePanel;
     [SerializeField] private GameObject _winGamePanel;
     [SerializeField] private GameObject _loseGamePanel;
+    [SerializeField] private GameObject _pausePanel;
+    [SerializeField] private PauseHandler _pauseHandler;
 
     private void Start()
     {
@@ -18,6 +20,9 @@ public class LevelController : SingletonBase<LevelController>
         _startGamePanel.SetActive(true);
         _winGamePanel.SetActive(false);
         _loseGamePanel.SetActive(false);
+        _pausePanel.SetActive(false);
+
+        _pauseHandler.enabled = false;
 
         Player.Instance.Ship.gameObject.SetActive(false);
         Player.Instance.Ship.Health.OnDeath += LoseGame; 
@@ -28,6 +33,9 @@ public class LevelController : SingletonBase<LevelController>
         _startGamePanel.SetActive(false);
         _winGamePanel.SetActive(true);
         _loseGamePanel.SetActive(false);
+        _pausePanel.SetActive(false);
+
+        _pauseHandler.enabled = false;
 
         Player.Instance.Ship.gameObject.SetActive(false);
         Player.Instance.Ship.Health.OnDeath -= LoseGame;
@@ -38,6 +46,9 @@ public class LevelController : SingletonBase<LevelController>
         _startGamePanel.SetActive(false);
         _winGamePanel.SetActive(false);
         _loseGamePanel.SetActive(true);
+        _pausePanel.SetActive(false);
+
+        _pauseHandler.enabled = false;
 
         Player.Instance.Ship.gameObject.SetActive(false);
         Player.Instance.Ship.Health.OnDeath -= LoseGame;
@@ -49,6 +60,33 @@ public class LevelController : SingletonBase<LevelController>
         _startGamePanel.SetActive(false);
         _winGamePanel.SetActive(false);
         _loseGamePanel.SetActive(false);
+        _pausePanel.SetActive(false);
+
+        _pauseHandler.enabled = true;
+
+        Player.Instance.Ship.gameObject.SetActive(true);
+    }
+
+    public void PauseGame()
+    {
+        _startGamePanel.SetActive(false);
+        _winGamePanel.SetActive(false);
+        _loseGamePanel.SetActive(false);
+        _pausePanel.SetActive(true);
+
+        _pauseHandler.enabled = true;
+
+        Player.Instance.Ship.gameObject.SetActive(false);
+    }
+
+    public void ResumeGame()
+    {
+        _startGamePanel.SetActive(false);
+        _winGamePanel.SetActive(false);
+        _loseGamePanel.SetActive(false);
+        _pausePanel.SetActive(false);
+
+        _pauseHandler.enabled = true;
 
         Player.Instance.Ship.gameObject.SetActive(true);
     }

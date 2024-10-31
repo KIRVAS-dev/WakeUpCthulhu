@@ -514,6 +514,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BG_SFX_Land
       objectReference: {fileID: 0}
+    - target: {fileID: 5813635306996119030, guid: 50ea3212a5342094794802ba85034b13, type: 3}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6268211108464238448, guid: 50ea3212a5342094794802ba85034b13, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.06

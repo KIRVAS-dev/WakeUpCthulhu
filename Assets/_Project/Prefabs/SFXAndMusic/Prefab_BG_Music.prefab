@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1700239713625345721}
   - component: {fileID: 4777404361651575997}
   m_Layer: 0
-  m_Name: Prefab_BG_Music_Ocean
+  m_Name: Prefab_BG_Music
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

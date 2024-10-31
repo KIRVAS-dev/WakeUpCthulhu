@@ -1,6 +1,5 @@
 using UnityEngine;
 using System;
-using static UnityEditor.Experimental.GraphView.GraphView;
 
 namespace CthulhuGame
 {
@@ -20,7 +19,9 @@ namespace CthulhuGame
         [SerializeField] private float _damageMultiplier;
         public float DamageMultiplier => _damageMultiplier;
 
-        [SerializeField] private bool _isIndestructible;     
+        [SerializeField] private bool _isIndestructible;
+
+        [SerializeField] private AudioSource _audioSource;
 
         public event Action OnHealthChanged;
         public event Action OnDeath;
@@ -46,6 +47,11 @@ namespace CthulhuGame
                 if (collision.gameObject.CompareTag("Garbage")) // Attention!
                 {
                     Destroy(collision.transform.parent.gameObject);   
+
+                    if (_audioSource)
+                    {
+                        _audioSource.Play();
+                    }
                 }
             }
         }

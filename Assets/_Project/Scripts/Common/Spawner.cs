@@ -99,7 +99,7 @@ namespace CthulhuGame
 
                     if (_entityIsTurnedToRandomAngle)
                     {
-                        entity.transform.rotation = Quaternion.AngleAxis(Random.Range(0, 360), Vector3.forward);
+                        entity.transform.rotation = Quaternion.AngleAxis(Random.Range(0, 360), Vector3.up);
                     }
                     else
                     {

@@ -4,9 +4,13 @@ using UnityEngine.SceneManagement;
 
 public class LevelController : SingletonBase<LevelController>
 {
-    [SerializeField] private GameObject _startGamePanel;
-    [SerializeField] private GameObject _winGamePanel;
-    [SerializeField] private GameObject _loseGamePanel;
+    [SerializeField] private PauseHandler _pauseHandler;
+    [SerializeField] private ScreenHandlerUI _screenHandler;
+    [SerializeField] private CthulhuTimer _timer;
+    public CthulhuTimer Timer => _timer;
+
+    [SerializeField] private GameResultController _gameResultController;
+    public GameResultController GameResultController => _gameResultController;
 
     private void Start()
     {
@@ -15,40 +19,58 @@ public class LevelController : SingletonBase<LevelController>
 
     private void LoadLevel()
     {
-        _startGamePanel.SetActive(true);
-        _winGamePanel.SetActive(false);
-        _loseGamePanel.SetActive(false);
+        _screenHandler.OpenMainMenu();
+        _pauseHandler.enabled = false;
 
         Player.Instance.Ship.gameObject.SetActive(false);
-        Player.Instance.Ship.Health.OnDeath += LoseGame; 
     }
 
-    private void WinGame()
+    public void WinGame()
     {
-        _startGamePanel.SetActive(false);
-        _winGamePanel.SetActive(true);
-        _loseGamePanel.SetActive(false);
+        _screenHandler.OpenWinGameScreen();
+        _pauseHandler.enabled = false;
 
         Player.Instance.Ship.gameObject.SetActive(false);
-        Player.Instance.Ship.Health.OnDeath -= LoseGame;
     }
 
-    private void LoseGame()
+    public void LoseGame()
     {
-        _startGamePanel.SetActive(false);
-        _winGamePanel.SetActive(false);
-        _loseGamePanel.SetActive(true);
+        _screenHandler.OpenLoseGameScreen();    
+        _pauseHandler.enabled = false;
 
         Player.Instance.Ship.gameObject.SetActive(false);
-        Player.Instance.Ship.Health.OnDeath -= LoseGame;
     }
 
     #region PublicAPI
     public void StartGame()
     {
-        _startGamePanel.SetActive(false);
-        _winGamePanel.SetActive(false);
-        _loseGamePanel.SetActive(false);
+        _timer.ResetTime();
+        _screenHandler.CloseAllScreens();
+        _pauseHandler.enabled = true;
+
+        Player.Instance.Ship.gameObject.SetActive(true);
+    }
+
+    public void ShowStory()
+    {
+        _screenHandler.ShowStoryScreen();
+        _pauseHandler.enabled = false;
+
+        Player.Instance.Ship.gameObject.SetActive(false);
+    }
+
+    public void PauseGame()
+    {
+        _screenHandler.ShowPauseScreen();
+        _pauseHandler.enabled = true;
+
+        Player.Instance.Ship.gameObject.SetActive(false);
+    }
+
+    public void ResumeGame()
+    {
+        _screenHandler.CloseAllScreens();
+        _pauseHandler.enabled = true;
 
         Player.Instance.Ship.gameObject.SetActive(true);
     }

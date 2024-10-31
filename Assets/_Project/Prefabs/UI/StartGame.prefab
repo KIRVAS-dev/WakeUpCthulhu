@@ -466,8 +466,8 @@ RectTransform:
   - {fileID: 3518013418721004403}
   - {fileID: 6308720249670502316}
   - {fileID: 5356465376227029429}
-  - {fileID: 7241734269011870941}
   - {fileID: 2042128242652850169}
+  - {fileID: 7241734269011870941}
   - {fileID: 1247916575899028091}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

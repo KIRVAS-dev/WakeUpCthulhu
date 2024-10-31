@@ -39,6 +39,7 @@ namespace CthulhuGame
             if (success)
             {
                 _canvasPanel.SetActive(true);
+                ActionButton.Instance.gameObject.SetActive(false);
             }
         }
 
@@ -77,6 +78,7 @@ namespace CthulhuGame
 
             Player.Instance.FishingRod.TryPutFishInShip();
             FishingChallenge.Instance.Deactivate();
+            ActionButton.Instance.gameObject.SetActive(true);
         }
 
         public void DoOnDecline()
@@ -91,6 +93,7 @@ namespace CthulhuGame
 
             Player.Instance.FishingRod.AssignFish(null);
             FishingChallenge.Instance.Deactivate();
+            ActionButton.Instance.gameObject.SetActive(true);
         }
     }
 }

@@ -13,6 +13,9 @@ namespace CthulhuGame
         [SerializeField] private Money _money;
         public Money Money => _money;
 
+        [SerializeField] private Reputation _reputation;
+        public Reputation Reputation => _reputation;
+
         [SerializeField] private PrometeoCarController _playerController;
         public PrometeoCarController PlayerController => _playerController;
 

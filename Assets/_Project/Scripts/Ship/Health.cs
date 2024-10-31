@@ -1,5 +1,6 @@
 using UnityEngine;
 using System;
+using static UnityEditor.Experimental.GraphView.GraphView;
 
 namespace CthulhuGame
 {
@@ -41,6 +42,11 @@ namespace CthulhuGame
                 int damage = Mathf.RoundToInt(_damageConstant + collisionSpeed * _damageMultiplier);
 
                 TryChangeHealthAmount(-Math.Abs(damage));
+
+                if (collision.gameObject.CompareTag("Garbage")) // Attention!
+                {
+                    Destroy(collision.transform.parent.gameObject);   
+                }
             }
         }
         #endregion

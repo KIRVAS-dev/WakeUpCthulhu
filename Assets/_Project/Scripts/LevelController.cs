@@ -4,12 +4,10 @@ using UnityEngine.SceneManagement;
 
 public class LevelController : SingletonBase<LevelController>
 {
-    [SerializeField] private GameObject _startGamePanel;
-    [SerializeField] private GameObject _winGamePanel;
-    [SerializeField] private GameObject _loseGamePanel;
-    [SerializeField] private GameObject _pausePanel;
-    [SerializeField] private GameObject _storyPanel;
     [SerializeField] private PauseHandler _pauseHandler;
+    [SerializeField] private CthulhuTimer _timer;
+    [SerializeField] private ScreenHandlerUI _screenHandler;
+    public CthulhuTimer Timer => _timer;
 
     private void Start()
     {
@@ -18,12 +16,7 @@ public class LevelController : SingletonBase<LevelController>
 
     private void LoadLevel()
     {
-        _startGamePanel.SetActive(true);
-        _winGamePanel.SetActive(false);
-        _loseGamePanel.SetActive(false);
-        _pausePanel.SetActive(false);
-        _storyPanel.SetActive(false);
-
+        _screenHandler.OpenMainMenu();
         _pauseHandler.enabled = false;
 
         Player.Instance.Ship.gameObject.SetActive(false);
@@ -32,12 +25,7 @@ public class LevelController : SingletonBase<LevelController>
 
     private void WinGame()
     {
-        _startGamePanel.SetActive(false);
-        _winGamePanel.SetActive(true);
-        _loseGamePanel.SetActive(false);
-        _pausePanel.SetActive(false);
-        _storyPanel.SetActive(false);
-
+        _screenHandler.OpenWinGameScreen();
         _pauseHandler.enabled = false;
 
         Player.Instance.Ship.gameObject.SetActive(false);
@@ -46,12 +34,7 @@ public class LevelController : SingletonBase<LevelController>
 
     private void LoseGame()
     {
-        _startGamePanel.SetActive(false);
-        _winGamePanel.SetActive(false);
-        _loseGamePanel.SetActive(true);
-        _pausePanel.SetActive(false);
-        _storyPanel.SetActive(false);
-
+        _screenHandler.OpenLoseGameScreen();    
         _pauseHandler.enabled = false;
 
         Player.Instance.Ship.gameObject.SetActive(false);
@@ -61,25 +44,16 @@ public class LevelController : SingletonBase<LevelController>
     #region PublicAPI
     public void StartGame()
     {
-        _startGamePanel.SetActive(false);
-        _winGamePanel.SetActive(false);
-        _loseGamePanel.SetActive(false);
-        _pausePanel.SetActive(false);
-        _storyPanel.SetActive(false);
-
+        _timer.ResetTime();
+        _screenHandler.CloseAllScreens();
         _pauseHandler.enabled = true;
 
         Player.Instance.Ship.gameObject.SetActive(true);
     }
 
-    public void ShowStoryScreen()
+    public void ShowStory()
     {
-        _startGamePanel.SetActive(false);
-        _winGamePanel.SetActive(false);
-        _loseGamePanel.SetActive(false);
-        _pausePanel.SetActive(false);
-        _storyPanel.SetActive(true);
-
+        _screenHandler.ShowStoryScreen();
         _pauseHandler.enabled = false;
 
         Player.Instance.Ship.gameObject.SetActive(false);
@@ -87,12 +61,7 @@ public class LevelController : SingletonBase<LevelController>
 
     public void PauseGame()
     {
-        _startGamePanel.SetActive(false);
-        _winGamePanel.SetActive(false);
-        _loseGamePanel.SetActive(false);
-        _pausePanel.SetActive(true);
-        _storyPanel.SetActive(false);
-
+        _screenHandler.ShowPauseScreen();
         _pauseHandler.enabled = true;
 
         Player.Instance.Ship.gameObject.SetActive(false);
@@ -100,12 +69,7 @@ public class LevelController : SingletonBase<LevelController>
 
     public void ResumeGame()
     {
-        _startGamePanel.SetActive(false);
-        _winGamePanel.SetActive(false);
-        _loseGamePanel.SetActive(false);
-        _pausePanel.SetActive(false);
-        _storyPanel.SetActive(false);
-
+        _screenHandler.CloseAllScreens();
         _pauseHandler.enabled = true;
 
         Player.Instance.Ship.gameObject.SetActive(true);

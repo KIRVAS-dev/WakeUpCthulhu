@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &7906524755531164997
+--- !u!1 &5488991951535928851
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,44 +8,44 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1700239713625345721}
-  - component: {fileID: 4777404361651575997}
+  - component: {fileID: 7125278439194422389}
+  - component: {fileID: 2296932329655360585}
   m_Layer: 0
-  m_Name: Prefab_BG_Music
+  m_Name: Prefab_BG_Music_Land
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1700239713625345721
+--- !u!4 &7125278439194422389
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7906524755531164997}
+  m_GameObject: {fileID: 5488991951535928851}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.22, y: 0.06, z: 1.0023211}
+  m_LocalPosition: {x: -2.61, y: 2.7242827, z: -3.911685}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!82 &4777404361651575997
+--- !u!82 &2296932329655360585
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7906524755531164997}
+  m_GameObject: {fileID: 5488991951535928851}
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: dccd75e85fff95c46aa82125c0789793, type: 3}
-  m_Resource: {fileID: 8300000, guid: dccd75e85fff95c46aa82125c0789793, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 391651c7a86cb134295df6ec0db321f4, type: 3}
+  m_Resource: {fileID: 8300000, guid: 391651c7a86cb134295df6ec0db321f4, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.9
+  m_Volume: 0.91
   m_Pitch: 1
   Loop: 1
   Mute: 0

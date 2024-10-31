@@ -8,6 +8,7 @@ public class LevelController : SingletonBase<LevelController>
     [SerializeField] private GameObject _winGamePanel;
     [SerializeField] private GameObject _loseGamePanel;
     [SerializeField] private GameObject _pausePanel;
+    [SerializeField] private GameObject _storyPanel;
     [SerializeField] private PauseHandler _pauseHandler;
 
     private void Start()
@@ -21,6 +22,7 @@ public class LevelController : SingletonBase<LevelController>
         _winGamePanel.SetActive(false);
         _loseGamePanel.SetActive(false);
         _pausePanel.SetActive(false);
+        _storyPanel.SetActive(false);
 
         _pauseHandler.enabled = false;
 
@@ -34,6 +36,7 @@ public class LevelController : SingletonBase<LevelController>
         _winGamePanel.SetActive(true);
         _loseGamePanel.SetActive(false);
         _pausePanel.SetActive(false);
+        _storyPanel.SetActive(false);
 
         _pauseHandler.enabled = false;
 
@@ -47,6 +50,7 @@ public class LevelController : SingletonBase<LevelController>
         _winGamePanel.SetActive(false);
         _loseGamePanel.SetActive(true);
         _pausePanel.SetActive(false);
+        _storyPanel.SetActive(false);
 
         _pauseHandler.enabled = false;
 
@@ -61,10 +65,24 @@ public class LevelController : SingletonBase<LevelController>
         _winGamePanel.SetActive(false);
         _loseGamePanel.SetActive(false);
         _pausePanel.SetActive(false);
+        _storyPanel.SetActive(false);
 
         _pauseHandler.enabled = true;
 
         Player.Instance.Ship.gameObject.SetActive(true);
+    }
+
+    public void ShowStoryScreen()
+    {
+        _startGamePanel.SetActive(false);
+        _winGamePanel.SetActive(false);
+        _loseGamePanel.SetActive(false);
+        _pausePanel.SetActive(false);
+        _storyPanel.SetActive(true);
+
+        _pauseHandler.enabled = false;
+
+        Player.Instance.Ship.gameObject.SetActive(false);
     }
 
     public void PauseGame()
@@ -73,6 +91,7 @@ public class LevelController : SingletonBase<LevelController>
         _winGamePanel.SetActive(false);
         _loseGamePanel.SetActive(false);
         _pausePanel.SetActive(true);
+        _storyPanel.SetActive(false);
 
         _pauseHandler.enabled = true;
 
@@ -85,6 +104,7 @@ public class LevelController : SingletonBase<LevelController>
         _winGamePanel.SetActive(false);
         _loseGamePanel.SetActive(false);
         _pausePanel.SetActive(false);
+        _storyPanel.SetActive(false);
 
         _pauseHandler.enabled = true;
 

@@ -5,9 +5,12 @@ using UnityEngine.SceneManagement;
 public class LevelController : SingletonBase<LevelController>
 {
     [SerializeField] private PauseHandler _pauseHandler;
-    [SerializeField] private CthulhuTimer _timer;
     [SerializeField] private ScreenHandlerUI _screenHandler;
+    [SerializeField] private CthulhuTimer _timer;
     public CthulhuTimer Timer => _timer;
+
+    [SerializeField] private GameResultController _gameResultController;
+    public GameResultController GameResultController => _gameResultController;
 
     private void Start()
     {
@@ -20,25 +23,22 @@ public class LevelController : SingletonBase<LevelController>
         _pauseHandler.enabled = false;
 
         Player.Instance.Ship.gameObject.SetActive(false);
-        Player.Instance.Ship.Health.OnDeath += LoseGame; 
     }
 
-    private void WinGame()
+    public void WinGame()
     {
         _screenHandler.OpenWinGameScreen();
         _pauseHandler.enabled = false;
 
         Player.Instance.Ship.gameObject.SetActive(false);
-        Player.Instance.Ship.Health.OnDeath -= LoseGame;
     }
 
-    private void LoseGame()
+    public void LoseGame()
     {
         _screenHandler.OpenLoseGameScreen();    
         _pauseHandler.enabled = false;
 
         Player.Instance.Ship.gameObject.SetActive(false);
-        Player.Instance.Ship.Health.OnDeath -= LoseGame;
     }
 
     #region PublicAPI

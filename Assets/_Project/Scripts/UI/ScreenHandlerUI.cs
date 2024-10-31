@@ -7,6 +7,8 @@ public class ScreenHandlerUI : MonoBehaviour
     [SerializeField] private GameObject _loseGamePanel;
     [SerializeField] private GameObject _pausePanel;
     [SerializeField] private GameObject _storyPanel;
+    [SerializeField] private GameObject _textTime;
+    [SerializeField] private GameObject _textCrash;
 
     public void OpenMainMenu()
     {
@@ -33,6 +35,17 @@ public class ScreenHandlerUI : MonoBehaviour
         _loseGamePanel.SetActive(true);
         _pausePanel.SetActive(false);
         _storyPanel.SetActive(false);
+
+        if (LevelController.Instance.GameResultController.IsTimerPassed)
+        {
+            _textTime.SetActive(true);
+            _textCrash.SetActive(false);
+        }
+        else
+        {
+            _textTime.SetActive(false);
+            _textCrash.SetActive(true);
+        }
     }
 
     public void CloseAllScreens()

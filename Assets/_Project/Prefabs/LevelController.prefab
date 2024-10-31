@@ -11,6 +11,9 @@ GameObject:
   - component: {fileID: 2212526663009811852}
   - component: {fileID: 5530384881966203683}
   - component: {fileID: 8833522691562192769}
+  - component: {fileID: 1240878269868381237}
+  - component: {fileID: 7343146538833542442}
+  - component: {fileID: 6152866507282511246}
   m_Layer: 0
   m_Name: LevelController
   m_TagString: Untagged
@@ -46,12 +49,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _doNotDestroyOnLoad: 1
-  _startGamePanel: {fileID: 0}
-  _winGamePanel: {fileID: 0}
-  _loseGamePanel: {fileID: 0}
-  _pausePanel: {fileID: 0}
-  _storyPanel: {fileID: 0}
-  _pauseHandler: {fileID: 0}
+  _pauseHandler: {fileID: 1240878269868381237}
+  _screenHandler: {fileID: 6152866507282511246}
+  _timer: {fileID: 8833522691562192769}
+  _gameResultController: {fileID: 7343146538833542442}
 --- !u!114 &8833522691562192769
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -65,3 +66,47 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _targetTime: 600
+--- !u!114 &1240878269868381237
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9144519392828782364}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4cccdd56efac9134ba6442816cf321bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _pauseScreen: {fileID: 0}
+--- !u!114 &7343146538833542442
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9144519392828782364}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44570e06b4af46e4988893f154647a31, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &6152866507282511246
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9144519392828782364}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 365ec6048b906b141b38aa3ed153df25, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _startGamePanel: {fileID: 0}
+  _winGamePanel: {fileID: 0}
+  _loseGamePanel: {fileID: 0}
+  _pausePanel: {fileID: 0}
+  _storyPanel: {fileID: 0}
+  _textTime: {fileID: 0}
+  _textCrash: {fileID: 0}

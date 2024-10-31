@@ -11,6 +11,7 @@ public class Reputation : MonoBehaviour
     public int TargetRep => _targetReputation;
 
     public event Action OnReputationChanged;
+    public event Action OnReputationGained;
 
     #region UnityEvents
     private void Start()
@@ -40,6 +41,11 @@ public class Reputation : MonoBehaviour
                 _currentReputation = currentReputation;
 
                 OnReputationChanged?.Invoke();
+
+                if (_currentReputation >= _targetReputation)
+                {
+                    OnReputationGained?.Invoke();
+                }
             }
         }
     }

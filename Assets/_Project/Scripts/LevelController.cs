@@ -71,6 +71,7 @@ public class LevelController : SingletonBase<LevelController>
     {
         _screenHandler.CloseAllScreens();
         _pauseHandler.enabled = true;
+        _pauseHandler.SetPauseActive(false);
 
         Player.Instance.Ship.gameObject.SetActive(true);
     }

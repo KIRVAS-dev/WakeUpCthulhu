@@ -124,7 +124,8 @@ namespace CthulhuGame
             enabled = true;
             OnEnable?.Invoke();
 
-            Player.Instance.TakeControlsFromPlayer();
+            //Player.Instance.PlayerController.ThrottleOff(); // // // Добавлено только что
+            //Player.Instance.TakeControlsFromPlayer(); // //
         }
 
         public void Deactivate()
@@ -133,7 +134,7 @@ namespace CthulhuGame
             _canvas.gameObject.SetActive(false);
             OnDisable?.Invoke();
 
-            Player.Instance.GiveControlsToPlayer();
+            //Player.Instance.GiveControlsToPlayer();
         }
         public void TryCatchFish()
         {

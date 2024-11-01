@@ -32,4 +32,9 @@ public class PauseHandler : MonoBehaviour
         LevelController.Instance.ResumeGame();
         _isPaused = false;
     }
+
+    public void SetPauseActive(bool value)
+    {
+        _isPaused = value;
+    }
 }
